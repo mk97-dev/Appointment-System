@@ -12,7 +12,10 @@ package physiotherapy.sports.injury.centre.psic;
 public class Patient extends Personnel {
     private static int count = 0;
     private String patientId = "Patient ";
-    public Patient(String fullName, String address, int phoneNumber, String patientId) {
+    
+    
+    
+    public Patient(String fullName, String address, int phoneNumber) {
         super(fullName, address, phoneNumber);
         patientId = patientId + String.valueOf(++count);
     }

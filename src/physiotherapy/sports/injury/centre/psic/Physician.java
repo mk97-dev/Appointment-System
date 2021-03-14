@@ -6,6 +6,7 @@
 package physiotherapy.sports.injury.centre.psic;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -14,13 +15,24 @@ import java.util.ArrayList;
 public class Physician extends Personnel {
     
     private ArrayList<String> expertise;
-    private String consultationHours;
+    private String consultationHours, appointmentHours;
     private static int count = 0;
     private String physicianId = "Physician ";
+    HashMap<String, String> expertiseAppointments;
+
+    public HashMap<String, String> getExpertiseAppointments() {
+        return expertiseAppointments;
+    }
+
+    public void addExpertiseAppointments(String expertise, String Time) {
+        expertiseAppointments.put(expertise, Time);
+    }
     
-     public Physician(String fullName, String address, int phoneNumber) {
+     public Physician(String fullName, String address, int phoneNumber, String consultationHours) {
         super(fullName, address, phoneNumber);
-        expertise = new ArrayList<String>();
+        //expertise = new ArrayList<String>();
+        this.consultationHours = consultationHours;
+        expertiseAppointments = new HashMap<String, String>();
         physicianId = physicianId + String.valueOf(++count);
     }
 
@@ -51,7 +63,7 @@ public class Physician extends Personnel {
    
     
     public void addExpertise(String expertise){
-        this.expertise.add("expertise");
+        this.expertise.add(expertise);
     }
     
 }
