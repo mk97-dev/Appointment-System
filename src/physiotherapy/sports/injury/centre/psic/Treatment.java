@@ -5,6 +5,8 @@
  */
 package physiotherapy.sports.injury.centre.psic;
 
+import java.time.LocalDateTime;
+
 /**
  *
  * @author Mubeen Khan
@@ -12,15 +14,15 @@ package physiotherapy.sports.injury.centre.psic;
 public class Treatment {
     private String treatmentName;
     private String place;
-    private String dateTimeOfBooking;
-    private String dateTimeOfTreatment;
+    private LocalDateTime dateTimeOfBooking;
+    private LocalDateTime dateTimeOfTreatment;
     private String physicianName;
     private String patientName;
     private String status;
     private static int count = 0;
     private String appointmentId = "Appointment ";
 
-    public Treatment(String treatmentName, String place, String dateTimeOfBooking, String dateTimeOfTreatment, String physicianName, String patientName, String status) {
+    public Treatment(String treatmentName, String place, LocalDateTime dateTimeOfBooking, LocalDateTime dateTimeOfTreatment, String physicianName, String patientName, String status) {
         this.treatmentName = treatmentName;
         this.place = place;
         this.dateTimeOfBooking = dateTimeOfBooking;
@@ -39,11 +41,11 @@ public class Treatment {
         return place;
     }
 
-    public String getDateTimeOfBooking() {
+    public LocalDateTime getDateTimeOfBooking() {
         return dateTimeOfBooking;
     }
 
-    public String getDateTimeOfTreatment() {
+    public LocalDateTime getDateTimeOfTreatment() {
         return dateTimeOfTreatment;
     }
 

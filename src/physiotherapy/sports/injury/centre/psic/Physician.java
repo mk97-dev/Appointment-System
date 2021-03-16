@@ -19,6 +19,9 @@ public class Physician extends Personnel {
     private static int count = 0;
     private String physicianId = "Physician ";
     HashMap<String, String> expertiseAppointments;
+    private ArrayList<String> workingDays;
+    private String[] workingHours;
+    
 
     public HashMap<String, String> getExpertiseAppointments() {
         return expertiseAppointments;
@@ -30,10 +33,19 @@ public class Physician extends Personnel {
     
      public Physician(String fullName, String address, int phoneNumber, String consultationHours) {
         super(fullName, address, phoneNumber);
-        //expertise = new ArrayList<String>();
+        expertise = new ArrayList<String>();
+        workingDays = new ArrayList<String>();
         this.consultationHours = consultationHours;
         expertiseAppointments = new HashMap<String, String>();
         physicianId = physicianId + String.valueOf(++count);
+    }
+
+    public ArrayList<String> getWorkingDays() {
+        return workingDays;
+    }
+
+    public void addWorkingDays(String workingDays) {
+        this.workingDays.add(workingDays);
     }
 
     public String getPhysicianId() {
