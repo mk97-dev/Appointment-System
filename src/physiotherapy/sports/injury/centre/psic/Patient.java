@@ -5,27 +5,31 @@
  */
 package physiotherapy.sports.injury.centre.psic;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Mubeen Khan
  */
 public class Patient extends Personnel {
     private static int count = 0;
-    private String patientId = "Patient ";
-    
-    
-    
-    public Patient(String fullName, String address, int phoneNumber) {
-        super(fullName, address, phoneNumber);
-        patientId = patientId + String.valueOf(++count);
+    private String patientId = "Patient";
+    private static ArrayList<Patient> patients = new ArrayList<Patient>();
+
+    public static ArrayList<Patient> getPatients() {
+        return patients;
     }
 
+    public static void setPatients(Patient aPatients) {
+        patients.add(aPatients);
+        
+    }
     public String getPatientId() {
         return patientId;
     }
 
-    public void setPatientId(String patientId) {
-        this.patientId = patientId;
+    public void setPatientId() {
+        patientId = patientId + String.valueOf(++count);
     }
     
     

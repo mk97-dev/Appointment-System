@@ -16,14 +16,6 @@ public class Personnel {
     private String address;
     private int phoneNumber;
     
-    public Personnel(String fullName,String address,int phoneNumber){
-    
-        uniqueId = ++count;
-        this.fullName = fullName;
-        this.address  = address;
-        this.phoneNumber = phoneNumber;
-        
-}
 
     public int getUniqueId() {
         return uniqueId;

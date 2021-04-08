@@ -6,6 +6,7 @@
 package physiotherapy.sports.injury.centre.psic;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,39 +14,33 @@ import java.time.LocalDateTime;
  */
 public class Treatment {
     private String treatmentName;
-    private String place;
-    private LocalDateTime dateTimeOfBooking;
-    private LocalDateTime dateTimeOfTreatment;
+    private String room;
+   //private LocalDateTime dateTimeOfBooking;
+    private String dateTimeOfTreatment;
     private String physicianName;
     private String patientName;
-    private String status;
     private static int count = 0;
     private String appointmentId = "Appointment ";
+    private String status;
+    private static ArrayList<Treatment> treatments = new ArrayList<Treatment>();
 
-    public Treatment(String treatmentName, String place, LocalDateTime dateTimeOfBooking, LocalDateTime dateTimeOfTreatment, String physicianName, String patientName, String status) {
+    public Treatment(String treatmentName,String dateTimeOfTreatment, String physicianName, String patientName,String room) {
         this.treatmentName = treatmentName;
-        this.place = place;
-        this.dateTimeOfBooking = dateTimeOfBooking;
+        this.room = room;
+        //this.dateTimeOfBooking = dateTimeOfBooking;
         this.dateTimeOfTreatment = dateTimeOfTreatment;
         this.physicianName = physicianName;
         this.patientName = patientName;
-        this.status = status;
+        this.status = "Booked";
         appointmentId = appointmentId + String.valueOf(++count);
+        treatments.add(this);
     }
 
     public String getTreatmentName() {
         return treatmentName;
     }
 
-    public String getPlace() {
-        return place;
-    }
-
-    public LocalDateTime getDateTimeOfBooking() {
-        return dateTimeOfBooking;
-    }
-
-    public LocalDateTime getDateTimeOfTreatment() {
+   public String getDateTimeOfTreatment() {
         return dateTimeOfTreatment;
     }
 
@@ -57,7 +52,47 @@ public class Treatment {
         return patientName;
     }
 
+    
+
+    /**
+     * @return the treatments
+     */
+    public static ArrayList<Treatment> getTreatments() {
+        return treatments;
+    }
+
+    /**
+     * @param aTreatments the treatments to set
+     */
+    public static void setTreatments(ArrayList<Treatment> aTreatments) {
+        treatments = aTreatments;
+    }
+
+    /**
+     * @return the room
+     */
+    public String getRoom() {
+        return room;
+    }
+
+    /**
+     * @param room the room to set
+     */
+    public void setRoom(String room) {
+        this.room = room;
+    }
+
+    /**
+     * @return the status
+     */
     public String getStatus() {
         return status;
+    }
+
+    /**
+     * @param status the status to set
+     */
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

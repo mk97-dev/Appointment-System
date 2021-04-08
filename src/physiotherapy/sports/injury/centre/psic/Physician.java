@@ -12,48 +12,25 @@ import java.util.HashMap;
  *
  * @author Mubeen Khan
  */
-public class Physician extends Personnel {
+public class Physician extends Personnel  {
     
-    private ArrayList<String> expertise;
-    private String consultationHours, appointmentHours;
+    private ArrayList<String> expertise = new ArrayList<String>();
     private static int count = 0;
+    private static ArrayList<Physician> physicians = new ArrayList<Physician>();
     private String physicianId = "Physician ";
-    HashMap<String, String> expertiseAppointments;
-    private ArrayList<String> workingDays;
-    private String[] workingHours;
+    private HashMap<Slots,String> timeTable = new HashMap<Slots,String>();
+    private String consultationHours;
+   private String status = "Available";
+   
+
+
     
-
-    public HashMap<String, String> getExpertiseAppointments() {
-        return expertiseAppointments;
-    }
-
-    public void addExpertiseAppointments(String expertise, String Time) {
-        expertiseAppointments.put(expertise, Time);
-    }
-    
-     public Physician(String fullName, String address, int phoneNumber, String consultationHours) {
-        super(fullName, address, phoneNumber);
-        expertise = new ArrayList<String>();
-        workingDays = new ArrayList<String>();
-        this.consultationHours = consultationHours;
-        expertiseAppointments = new HashMap<String, String>();
-        physicianId = physicianId + String.valueOf(++count);
-    }
-
-    public ArrayList<String> getWorkingDays() {
-        return workingDays;
-    }
-
-    public void addWorkingDays(String workingDays) {
-        this.workingDays.add(workingDays);
-    }
-
     public String getPhysicianId() {
         return physicianId;
     }
 
-    public void setPhysicianId(String physicianId) {
-        this.physicianId = physicianId;
+    public void setPhysicianId() {
+        physicianId = physicianId + String.valueOf(++count);
     }
      
     public ArrayList<String> getExpertise() {
@@ -64,6 +41,44 @@ public class Physician extends Personnel {
         this.expertise = expertise;
     }
 
+    
+   
+    
+    public void addExpertise(String expertise){
+        this.expertise.add(expertise);
+    }
+
+    /**
+     * @return the physicians
+     */
+    public static ArrayList<Physician> getPhysicians() {
+        return physicians;
+    }
+
+    /**
+     * @param aPhysicians the physicians to set
+     */
+    public static void setPhysicians(Physician aPhysicians) {
+        physicians.add(aPhysicians);
+    }
+
+
+    /**
+     * @return the timeTable
+     */
+    public HashMap<Slots,String> getTimeTable() {
+        return timeTable;
+    }
+
+    /**
+     * @param date the timeTable to set
+     * @param expertise
+     */
+    public void setTimeTable(String date,String expertise) {
+        
+        timeTable.put(new Slots(date,expertise),this.status);
+    }
+
     public String getConsultationHours() {
         return consultationHours;
     }
@@ -71,11 +86,5 @@ public class Physician extends Personnel {
     public void setConsultationHours(String consultationHours) {
         this.consultationHours = consultationHours;
     }
-    
-   
-    
-    public void addExpertise(String expertise){
-        this.expertise.add(expertise);
-    }
-    
+
 }
