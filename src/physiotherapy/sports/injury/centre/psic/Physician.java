@@ -5,8 +5,13 @@
  */
 package physiotherapy.sports.injury.centre.psic;
 
+import java.time.DayOfWeek;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.TextStyle;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
 
 /**
  *
@@ -19,7 +24,7 @@ public class Physician extends Personnel  {
     private static ArrayList<Physician> physicians = new ArrayList<Physician>();
     private String physicianId = "Physician ";
     private HashMap<Slots,String> timeTable = new HashMap<Slots,String>();
-    private String consultationHours;
+    private ArrayList<String> consultationHours = new ArrayList<String>();
    private String status = "Available";
    
 
@@ -75,16 +80,24 @@ public class Physician extends Personnel  {
      * @param expertise
      */
     public void setTimeTable(String date,String expertise) {
-        
-        timeTable.put(new Slots(date,expertise),this.status);
+         
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"); 
+        LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+        DayOfWeek dow = dateTime.getDayOfWeek();
+        String dayDate = dow.getDisplayName(TextStyle.SHORT, Locale.UK)+" "+date;
+        timeTable.put(new Slots(dayDate,expertise),this.status);
     }
 
-    public String getConsultationHours() {
+    public ArrayList<String> getConsultationHours() {
         return consultationHours;
     }
 
-    public void setConsultationHours(String consultationHours) {
-        this.consultationHours = consultationHours;
+    public void setConsultationHours(String date) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"); 
+        LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+        DayOfWeek dow = dateTime.getDayOfWeek();
+        String dayDate = dow.getDisplayName(TextStyle.SHORT, Locale.UK)+" "+date;
+        consultationHours.add(dayDate);
     }
 
 }

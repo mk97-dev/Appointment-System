@@ -78,7 +78,6 @@ public class PatientView extends javax.swing.JFrame {
         btnBackBook1 = new javax.swing.JButton();
         btnCancelBooking = new javax.swing.JButton();
         btnEditBooking = new javax.swing.JButton();
-        checkIn = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         comboBoxTreatments1 = new javax.swing.JComboBox<>();
 
@@ -430,8 +429,6 @@ public class PatientView extends javax.swing.JFrame {
 
         btnEditBooking.setText("Edit");
 
-        checkIn.setText("jButton6");
-
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -450,13 +447,11 @@ public class PatientView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(btnEditBooking)
-                        .addGap(28, 28, 28)
-                        .addComponent(checkIn)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(comboBoxAppointments, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(42, 42, 42))))
+                        .addGap(42, 42, 42))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(btnEditBooking, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -472,9 +467,7 @@ public class PatientView extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCancelBooking)
-                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnEditBooking)
-                        .addComponent(checkIn)))
+                    .addComponent(btnEditBooking))
                 .addContainerGap(225, Short.MAX_VALUE))
         );
 
@@ -645,10 +638,10 @@ public class PatientView extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
         //jTabbedPane1.setSelectedIndex(1);
-        if (isPatient(txtPatientId.getText())) {
+        patient = isPatient(txtPatientId.getText());
+        if (!patient.equals("")) {
             jTabbedPane1.setSelectedIndex(1);
-            patient = txtPatientId.getText();
-
+            
         } else {
             Component frame = null;
             JOptionPane.showMessageDialog(frame,
@@ -781,7 +774,12 @@ public class PatientView extends javax.swing.JFrame {
 
             }
         }
-        txtAreaBookings.setText(s);
+         if(s.equals("Treatment\tPhysician\tTime\t\tPatient\tStatus\n")){
+                txtAreaBookings.setText("No Bookings for this Patient");
+            }
+            else{
+                txtAreaBookings.setText(s);
+            }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void btnSelectDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectDateActionPerformed
@@ -1003,7 +1001,6 @@ public class PatientView extends javax.swing.JFrame {
     private javax.swing.JButton btnSelectTreatment;
     private javax.swing.JButton btnSelectTreatment1;
     private javax.swing.JButton btnSelectedPhysician;
-    private javax.swing.JButton checkIn;
     private javax.swing.JComboBox<String> comboBoxAppointments;
     private javax.swing.JComboBox<String> comboBoxDate;
     private javax.swing.JComboBox<String> comboBoxDate1;
@@ -1040,13 +1037,13 @@ public class PatientView extends javax.swing.JFrame {
     private javax.swing.JTextField txtPatientId;
     // End of variables declaration//GEN-END:variables
 
-    private boolean isPatient(String patientId) {
+    private String isPatient(String patientId) {
 
         for (Patient patient : Patient.getPatients()) {
             if (patient.getPatientId().equals(patientId)) {
-                return true;
+                return patient.getFullName();
             }
         }
-        return false;
+        return "";
     }
 }

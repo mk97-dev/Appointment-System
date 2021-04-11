@@ -13,6 +13,16 @@ import java.util.ArrayList;
  */
 public class Patient extends Personnel {
     private static int count = 0;
+
+    public static Patient getPatient(String patientName) {
+        for(Patient patient:Patient.getPatients()){
+            if(patient.getFullName().equals(patientName)){
+                return patient;
+            }
+            
+        }
+        return null;
+    }
     private String patientId = "Patient";
     private static ArrayList<Patient> patients = new ArrayList<Patient>();
 
