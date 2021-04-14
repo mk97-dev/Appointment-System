@@ -22,7 +22,7 @@ public class Physician extends Personnel  {
     private ArrayList<String> expertise = new ArrayList<String>();
     private static int count = 0;
     private static ArrayList<Physician> physicians = new ArrayList<Physician>();
-    private String physicianId = "Physician ";
+    private String physicianId = "Physician";
     private HashMap<Slots,String> timeTable = new HashMap<Slots,String>();
     private ArrayList<String> consultationHours = new ArrayList<String>();
    private String status = "Available";

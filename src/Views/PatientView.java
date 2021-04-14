@@ -78,6 +78,10 @@ public class PatientView extends javax.swing.JFrame {
         btnBackBook1 = new javax.swing.JButton();
         btnCancelBooking = new javax.swing.JButton();
         btnEditBooking = new javax.swing.JButton();
+        jPanelChangeAppointment = new javax.swing.JPanel();
+        lblChangeAppointment = new javax.swing.JLabel();
+        comboBoxChangeAppointment = new javax.swing.JComboBox<>();
+        btnChangeAppointment = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         comboBoxTreatments1 = new javax.swing.JComboBox<>();
 
@@ -409,7 +413,7 @@ public class PatientView extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("Book Appointment");
+        jLabel5.setText("EDIT APPOINTMENT");
 
         lblSelectAppointment.setText("Select Appointment");
 
@@ -428,6 +432,47 @@ public class PatientView extends javax.swing.JFrame {
         });
 
         btnEditBooking.setText("Edit");
+        btnEditBooking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditBookingActionPerformed(evt);
+            }
+        });
+
+        lblChangeAppointment.setText("Select Date");
+
+        btnChangeAppointment.setText("Change");
+        btnChangeAppointment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnChangeAppointmentActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelChangeAppointmentLayout = new javax.swing.GroupLayout(jPanelChangeAppointment);
+        jPanelChangeAppointment.setLayout(jPanelChangeAppointmentLayout);
+        jPanelChangeAppointmentLayout.setHorizontalGroup(
+            jPanelChangeAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelChangeAppointmentLayout.createSequentialGroup()
+                .addGroup(jPanelChangeAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanelChangeAppointmentLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnChangeAppointment))
+                    .addGroup(jPanelChangeAppointmentLayout.createSequentialGroup()
+                        .addComponent(lblChangeAppointment)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                        .addComponent(comboBoxChangeAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(48, 48, 48))
+        );
+        jPanelChangeAppointmentLayout.setVerticalGroup(
+            jPanelChangeAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelChangeAppointmentLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(jPanelChangeAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblChangeAppointment)
+                    .addComponent(comboBoxChangeAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnChangeAppointment)
+                .addContainerGap(96, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -436,30 +481,33 @@ public class PatientView extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnBackBook1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 261, Short.MAX_VALUE)
+                .addGap(191, 191, 191)
                 .addComponent(jLabel5)
-                .addGap(150, 150, 150))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblSelectAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCancelBooking))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanelChangeAppointment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(comboBoxAppointments, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(42, 42, 42))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(btnEditBooking, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblSelectAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCancelBooking))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(comboBoxAppointments, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(42, 42, 42))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(btnEditBooking, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(btnBackBook1))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnBackBook1)
+                    .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblSelectAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -468,7 +516,9 @@ public class PatientView extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCancelBooking)
                     .addComponent(btnEditBooking))
-                .addContainerGap(225, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanelChangeAppointment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("tab1", jPanel5);
@@ -551,9 +601,9 @@ public class PatientView extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnBackBook2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(173, 173, 173)
                 .addComponent(jLabel6)
-                .addGap(150, 150, 150))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
@@ -707,7 +757,7 @@ public class PatientView extends javax.swing.JFrame {
             if (physician.getFullName().equals(comboBoxPhysicians.getSelectedItem())) {
                 for (Map.Entry<Slots, String> entry : physician.getTimeTable().entrySet()) {
                     if (entry.getValue().equals("Available") && entry.getKey().getTreatment().equals(comboBoxTreatments.getSelectedItem()) && entry.getKey().getSlotDateTime().equals(comboBoxDate.getSelectedItem())) {
-                        comboBoxDate.addItem(entry.getKey().getSlotDateTime());
+                        comboBoxDate.removeItem(entry.getKey().getSlotDateTime());
                         entry.setValue("Booked");
                         Component frame = null;
                         JOptionPane.showMessageDialog(frame,
@@ -819,6 +869,7 @@ public class PatientView extends javax.swing.JFrame {
 
     private void btnChangeBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeBookingActionPerformed
         // TODO add your handling code here:
+        jPanelChangeAppointment.setVisible(false);
         comboBoxAppointments.removeAllItems();
         for (Treatment treatment : Treatment.getTreatments()) {
             if (treatment.getPatientName().equals(patient) && treatment.getStatus().equals("Booked")) {
@@ -946,6 +997,60 @@ public class PatientView extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnSelectDate1ActionPerformed
 
+    private void btnEditBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditBookingActionPerformed
+        // TODO add your handling code here:
+        for (Treatment treatment : Treatment.getTreatments()) {
+            if (treatment.getDateTimeOfTreatment().equals(comboBoxAppointments.getSelectedItem())) {
+                
+                for (Physician physician : Physician.getPhysicians()) {
+                    if (physician.getFullName().equals(treatment.getPhysicianName())) {
+                        for (Map.Entry<Slots, String> entry : physician.getTimeTable().entrySet()) {
+                            if (entry.getValue().equals("Available") && entry.getKey().getTreatment().equals(treatment.getTreatmentName())) {
+                                comboBoxChangeAppointment.addItem(entry.getKey().getSlotDateTime());
+                                jPanelChangeAppointment.setVisible(true);
+                                
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }//GEN-LAST:event_btnEditBookingActionPerformed
+
+    private void btnChangeAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeAppointmentActionPerformed
+        // TODO add your handling code here:
+        for (Treatment treatment : Treatment.getTreatments()) {
+            if (treatment.getDateTimeOfTreatment().equals(comboBoxAppointments.getSelectedItem())) {
+                
+                for (Physician physician : Physician.getPhysicians()) {
+                    if (physician.getFullName().equals(treatment.getPhysicianName())) {
+                        for (Map.Entry<Slots, String> entry : physician.getTimeTable().entrySet()) {
+                            if (entry.getValue().equals("Booked") && entry.getKey().getSlotDateTime().equals(comboBoxAppointments.getSelectedItem())) {
+                                
+                                entry.setValue("Available");
+                                treatment.setStatus("Changed");
+                            }
+                            if (entry.getValue().equals("Available") && entry.getKey().getTreatment().equals(treatment.getTreatmentName()) && entry.getKey().getSlotDateTime().equals(comboBoxChangeAppointment.getSelectedItem())) {
+                        //comboBoxDate.removeItem(entry.getKey().getSlotDateTime());
+                        entry.setValue("Booked");
+                        Component frame = null;
+                        JOptionPane.showMessageDialog(frame,
+                                "Appointment Changed",
+                                "Booking",
+                                JOptionPane.INFORMATION_MESSAGE);
+                        Treatment newTreatment = new Treatment(String.valueOf(treatment.getTreatmentName()), String.valueOf(comboBoxChangeAppointment.getSelectedItem()), String.valueOf(treatment.getPhysicianName()), patient, String.valueOf(treatment.getRoom()));
+                        jTabbedPane1.setSelectedIndex(1);
+                    }
+                            
+
+                        }
+                    }
+                }
+            }
+        }
+    }//GEN-LAST:event_btnChangeAppointmentActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -992,6 +1097,7 @@ public class PatientView extends javax.swing.JFrame {
     private javax.swing.JButton btnBook;
     private javax.swing.JButton btnBook1;
     private javax.swing.JButton btnCancelBooking;
+    private javax.swing.JButton btnChangeAppointment;
     private javax.swing.JButton btnChangeBooking;
     private javax.swing.JButton btnEditBooking;
     private javax.swing.JButton btnLogin;
@@ -1002,6 +1108,7 @@ public class PatientView extends javax.swing.JFrame {
     private javax.swing.JButton btnSelectTreatment1;
     private javax.swing.JButton btnSelectedPhysician;
     private javax.swing.JComboBox<String> comboBoxAppointments;
+    private javax.swing.JComboBox<String> comboBoxChangeAppointment;
     private javax.swing.JComboBox<String> comboBoxDate;
     private javax.swing.JComboBox<String> comboBoxDate1;
     private javax.swing.JComboBox<String> comboBoxPhysicians;
@@ -1024,8 +1131,10 @@ public class PatientView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanelChangeAppointment;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel lblChangeAppointment;
     private javax.swing.JLabel lblDate;
     private javax.swing.JLabel lblDate1;
     private javax.swing.JLabel lblPhysician1;

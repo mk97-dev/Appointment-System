@@ -429,10 +429,7 @@ public class Mainmenu extends javax.swing.JFrame {
         return patients;
     }
     
-    private static void addAppointments(){
-            Treatment newTreatment1 = new Treatment(String.valueOf(comboBoxTreatments.getSelectedItem()), String.valueOf(comboBoxDate.getSelectedItem()), String.valueOf(comboBoxPhysicians.getSelectedItem()), patient, String.valueOf(comboBoxRooms.getSelectedItem()));
-
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdminMenu;

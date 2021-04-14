@@ -52,8 +52,6 @@ public class Treatment {
         return patientName;
     }
 
-    
-
     /**
      * @return the treatments
      */
