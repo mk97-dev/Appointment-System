@@ -129,9 +129,6 @@ public class PhysicianTest {
         ArrayList<Physician> result = Physician.getPhysicians();
         assertEquals(expResult, result);
     }
-
-
-
     /**
      * Test of getConsultationHours method, of class Physician.
      */

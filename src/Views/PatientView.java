@@ -681,7 +681,7 @@ public class PatientView extends javax.swing.JFrame {
         lblRooms1.setVisible(false);
         comboBoxRooms1.setVisible(false);
         btnBook1.setVisible(false);
-        
+
         jTabbedPane1.setSelectedIndex(5);
     }//GEN-LAST:event_btnAppointmentByExpertiseActionPerformed
 
@@ -691,7 +691,7 @@ public class PatientView extends javax.swing.JFrame {
         patient = isPatient(txtPatientId.getText());
         if (!patient.equals("")) {
             jTabbedPane1.setSelectedIndex(1);
-            
+
         } else {
             Component frame = null;
             JOptionPane.showMessageDialog(frame,
@@ -752,26 +752,37 @@ public class PatientView extends javax.swing.JFrame {
 
     private void btnBookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBookActionPerformed
         // TODO add your handling code here:
+        if (!(Treatment.findTreatment(patient, String.valueOf(comboBoxDate.getSelectedItem())))) {
+            for (Physician physician : Physician.getPhysicians()) {
+                if (physician.getFullName().equals(comboBoxPhysicians.getSelectedItem())) {
+                    for (Map.Entry<Slots, String> entry : physician.getTimeTable().entrySet()) {
+                        if (entry.getValue().equals("Available") && entry.getKey().getTreatment().equals(comboBoxTreatments.getSelectedItem()) && entry.getKey().getSlotDateTime().equals(comboBoxDate.getSelectedItem())) {
 
-        for (Physician physician : Physician.getPhysicians()) {
-            if (physician.getFullName().equals(comboBoxPhysicians.getSelectedItem())) {
-                for (Map.Entry<Slots, String> entry : physician.getTimeTable().entrySet()) {
-                    if (entry.getValue().equals("Available") && entry.getKey().getTreatment().equals(comboBoxTreatments.getSelectedItem()) && entry.getKey().getSlotDateTime().equals(comboBoxDate.getSelectedItem())) {
-                        comboBoxDate.removeItem(entry.getKey().getSlotDateTime());
-                        entry.setValue("Booked");
-                        Component frame = null;
-                        JOptionPane.showMessageDialog(frame,
-                                "Appointment Booked",
-                                "Booking",
-                                JOptionPane.INFORMATION_MESSAGE);
-                        Treatment newTreatment = new Treatment(String.valueOf(comboBoxTreatments.getSelectedItem()), String.valueOf(comboBoxDate.getSelectedItem()), String.valueOf(comboBoxPhysicians.getSelectedItem()), patient, String.valueOf(comboBoxRooms.getSelectedItem()));
-                        break;
+                            entry.setValue("Booked");
+                            Component frame = null;
+                            JOptionPane.showMessageDialog(frame,
+                                    "Appointment Booked",
+                                    "Booking",
+                                    JOptionPane.INFORMATION_MESSAGE);
+                            Treatment newTreatment = new Treatment(String.valueOf(comboBoxTreatments.getSelectedItem()), String.valueOf(comboBoxDate.getSelectedItem()), String.valueOf(comboBoxPhysicians.getSelectedItem()), patient, String.valueOf(comboBoxRooms.getSelectedItem()));
+                            comboBoxDate.removeItem(entry.getKey().getSlotDateTime());
+                            break;
+
+                        }
                     }
 
                 }
 
             }
+        } else {
+            Component frame = null;
+            JOptionPane.showMessageDialog(frame,
+                    "Appointment Already booked at this time. Please select different date.",
+                    "Booking",
+                    JOptionPane.INFORMATION_MESSAGE);
+
         }
+
 
     }//GEN-LAST:event_btnBookActionPerformed
 
@@ -803,7 +814,10 @@ public class PatientView extends javax.swing.JFrame {
 
     private void btnBackPatientviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackPatientviewActionPerformed
         // TODO add your handling code here:
-        jTabbedPane1.setSelectedIndex(0);
+        Mainmenu newView = new Mainmenu();
+        newView.setVisible(true);
+        setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_btnBackPatientviewActionPerformed
 
     private void btnBackPatientLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackPatientLoginActionPerformed
@@ -824,12 +838,11 @@ public class PatientView extends javax.swing.JFrame {
 
             }
         }
-         if(s.equals("Treatment\tPhysician\tTime\t\tPatient\tStatus\n")){
-                txtAreaBookings.setText("No Bookings for this Patient");
-            }
-            else{
-                txtAreaBookings.setText(s);
-            }
+        if (s.equals("Treatment\tPhysician\tTime\t\tPatient\tStatus\n")) {
+            txtAreaBookings.setText("No Bookings for this Patient");
+        } else {
+            txtAreaBookings.setText(s);
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void btnSelectDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectDateActionPerformed
@@ -841,7 +854,7 @@ public class PatientView extends javax.swing.JFrame {
         for (Room room : Room.getRooms()) {
             comboBoxRooms.addItem(room.getRoomName());
             for (Treatment treatment : Treatment.getTreatments()) {
-                if ((treatment.getRoom().equals(room.getRoomName())) && (treatment.getDateTimeOfTreatment().equals(comboBoxDate.getSelectedItem()))) {
+                if ((treatment.getRoom().equals(room.getRoomName())) && (treatment.getDateTimeOfTreatment().equals(comboBoxDate.getSelectedItem())) && treatment.getStatus().equals("Booked")) {
                     comboBoxRooms.removeItem(room.getRoomName());
                 }
             }
@@ -872,7 +885,7 @@ public class PatientView extends javax.swing.JFrame {
         jPanelChangeAppointment.setVisible(false);
         comboBoxAppointments.removeAllItems();
         for (Treatment treatment : Treatment.getTreatments()) {
-            if (treatment.getPatientName().equals(patient) && treatment.getStatus().equals("Booked")) {
+            if (treatment.getPatientName().equals(patient) && (treatment.getStatus().equals("Booked") || treatment.getStatus().equals("Changed"))) {
                 comboBoxAppointments.addItem(treatment.getDateTimeOfTreatment());
             }
         }
@@ -891,10 +904,10 @@ public class PatientView extends javax.swing.JFrame {
                             if (entry.getValue().equals("Booked") && entry.getKey().getSlotDateTime().equals(comboBoxAppointments.getSelectedItem())) {
                                 entry.setValue("Available");
                                 Component frame = null;
-                        JOptionPane.showMessageDialog(frame,
-                                "Appointment Cancelled",
-                                "Booking",
-                                JOptionPane.INFORMATION_MESSAGE);
+                                JOptionPane.showMessageDialog(frame,
+                                        "Appointment Cancelled",
+                                        "Booking",
+                                        JOptionPane.INFORMATION_MESSAGE);
                             }
 
                         }
@@ -934,7 +947,7 @@ public class PatientView extends javax.swing.JFrame {
 
             }
         }
-        
+
     }//GEN-LAST:event_btnSelectPhysician1ActionPerformed
 
     private void btnSelectTreatment1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectTreatment1ActionPerformed
@@ -944,20 +957,19 @@ public class PatientView extends javax.swing.JFrame {
         btnSelectPhysician1.setVisible(true);
         comboBoxPhysicians1.removeAllItems();
         for (Physician physician : Physician.getPhysicians()) {
-            if(physician.getExpertise().contains(String.valueOf(comboBoxTreatments1.getSelectedItem()))){
-            comboBoxPhysicians1.addItem(physician.getFullName());
+            if (physician.getExpertise().contains(String.valueOf(comboBoxTreatments1.getSelectedItem()))) {
+                comboBoxPhysicians1.addItem(physician.getFullName());
             }
         }
     }//GEN-LAST:event_btnSelectTreatment1ActionPerformed
 
     private void btnBook1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBook1ActionPerformed
         // TODO add your handling code here:
-         for (Physician physician : Physician.getPhysicians()) {
+        for (Physician physician : Physician.getPhysicians()) {
             if (physician.getFullName().equals(comboBoxPhysicians1.getSelectedItem())) {
                 for (Map.Entry<Slots, String> entry : physician.getTimeTable().entrySet()) {
                     if (entry.getValue().equals("Available") && entry.getKey().getTreatment().equals(comboBoxTreatments1.getSelectedItem()) && entry.getKey().getSlotDateTime().equals(comboBoxDate1.getSelectedItem())) {
-                        
-                        
+
                         entry.setValue("Booked");
                         Component frame = null;
                         JOptionPane.showMessageDialog(frame,
@@ -989,7 +1001,7 @@ public class PatientView extends javax.swing.JFrame {
         for (Room room : Room.getRooms()) {
             comboBoxRooms1.addItem(room.getRoomName());
             for (Treatment treatment : Treatment.getTreatments()) {
-                if ((treatment.getRoom().equals(room.getRoomName())) && (treatment.getDateTimeOfTreatment().equals(comboBoxDate1.getSelectedItem()))) {
+                if ((treatment.getRoom().equals(room.getRoomName())) && (treatment.getDateTimeOfTreatment().equals(comboBoxDate1.getSelectedItem())) && treatment.getStatus().equals("Booked")) {
                     comboBoxRooms1.removeItem(room.getRoomName());
                 }
             }
@@ -999,16 +1011,18 @@ public class PatientView extends javax.swing.JFrame {
 
     private void btnEditBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditBookingActionPerformed
         // TODO add your handling code here:
+        comboBoxChangeAppointment.removeAllItems();
+
         for (Treatment treatment : Treatment.getTreatments()) {
             if (treatment.getDateTimeOfTreatment().equals(comboBoxAppointments.getSelectedItem())) {
-                
+
                 for (Physician physician : Physician.getPhysicians()) {
                     if (physician.getFullName().equals(treatment.getPhysicianName())) {
                         for (Map.Entry<Slots, String> entry : physician.getTimeTable().entrySet()) {
                             if (entry.getValue().equals("Available") && entry.getKey().getTreatment().equals(treatment.getTreatmentName())) {
                                 comboBoxChangeAppointment.addItem(entry.getKey().getSlotDateTime());
                                 jPanelChangeAppointment.setVisible(true);
-                                
+
                             }
 
                         }
@@ -1021,28 +1035,28 @@ public class PatientView extends javax.swing.JFrame {
     private void btnChangeAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeAppointmentActionPerformed
         // TODO add your handling code here:
         for (Treatment treatment : Treatment.getTreatments()) {
-            if (treatment.getDateTimeOfTreatment().equals(comboBoxAppointments.getSelectedItem())) {
-                
+            if (treatment.getDateTimeOfTreatment().equals(comboBoxAppointments.getSelectedItem()) && treatment.getPatientName().equals(patient)) {
+
                 for (Physician physician : Physician.getPhysicians()) {
                     if (physician.getFullName().equals(treatment.getPhysicianName())) {
                         for (Map.Entry<Slots, String> entry : physician.getTimeTable().entrySet()) {
                             if (entry.getValue().equals("Booked") && entry.getKey().getSlotDateTime().equals(comboBoxAppointments.getSelectedItem())) {
-                                
+
                                 entry.setValue("Available");
                                 treatment.setStatus("Changed");
+                                treatment.setDateTimeOfTreatment(String.valueOf(comboBoxChangeAppointment.getSelectedItem()));
+
                             }
                             if (entry.getValue().equals("Available") && entry.getKey().getTreatment().equals(treatment.getTreatmentName()) && entry.getKey().getSlotDateTime().equals(comboBoxChangeAppointment.getSelectedItem())) {
-                        //comboBoxDate.removeItem(entry.getKey().getSlotDateTime());
-                        entry.setValue("Booked");
-                        Component frame = null;
-                        JOptionPane.showMessageDialog(frame,
-                                "Appointment Changed",
-                                "Booking",
-                                JOptionPane.INFORMATION_MESSAGE);
-                        Treatment newTreatment = new Treatment(String.valueOf(treatment.getTreatmentName()), String.valueOf(comboBoxChangeAppointment.getSelectedItem()), String.valueOf(treatment.getPhysicianName()), patient, String.valueOf(treatment.getRoom()));
-                        jTabbedPane1.setSelectedIndex(1);
-                    }
-                            
+                                //comboBoxDate.removeItem(entry.getKey().getSlotDateTime());
+                                entry.setValue("Booked");
+                                Component frame = null;
+                                JOptionPane.showMessageDialog(frame,
+                                        "Appointment Changed",
+                                        "Booking",
+                                        JOptionPane.INFORMATION_MESSAGE);
+                                jTabbedPane1.setSelectedIndex(1);
+                            }
 
                         }
                     }

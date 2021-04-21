@@ -11,7 +11,9 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.TextStyle;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Locale;
+import java.util.Map;
 
 /**
  *
@@ -23,8 +25,8 @@ public class Physician extends Personnel  {
     private static int count = 0;
     private static ArrayList<Physician> physicians = new ArrayList<Physician>();
     private String physicianId = "Physician";
-    private HashMap<Slots,String> timeTable = new HashMap<Slots,String>();
-    private ArrayList<String> consultationHours = new ArrayList<String>();
+    private LinkedHashMap<Slots,String> timeTable = new LinkedHashMap<Slots,String>();
+    private LinkedHashMap<String,String> consultationHours = new LinkedHashMap<String,String>();
    private String status = "Available";
    
 
@@ -88,16 +90,22 @@ public class Physician extends Personnel  {
         timeTable.put(new Slots(dayDate,expertise),this.status);
     }
 
-    public ArrayList<String> getConsultationHours() {
+    public LinkedHashMap<String,String> getConsultationHours() {
         return consultationHours;
     }
 
     public void setConsultationHours(String date) {
+        for(int j=0;j<4;j++){
+        for(int i=0;i<4;i++){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"); 
         LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+        dateTime = dateTime.plusMinutes(30*i);
+        dateTime = dateTime.plusDays(j*7);
         DayOfWeek dow = dateTime.getDayOfWeek();
-        String dayDate = dow.getDisplayName(TextStyle.SHORT, Locale.UK)+" "+date;
-        consultationHours.add(dayDate);
+        String dayDate = dow.getDisplayName(TextStyle.SHORT, Locale.UK)+" "+formatter.format(dateTime);
+        consultationHours.put(dayDate,"Available");
+    }
+        }
     }
 
 }

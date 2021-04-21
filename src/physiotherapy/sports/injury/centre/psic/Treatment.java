@@ -13,6 +13,8 @@ import java.util.ArrayList;
  * @author Mubeen Khan
  */
 public class Treatment {
+
+   
     private String treatmentName;
     private String room;
    //private LocalDateTime dateTimeOfBooking;
@@ -92,5 +94,22 @@ public class Treatment {
      */
     public void setStatus(String status) {
         this.status = status;
+    }
+     public static boolean findTreatment(String patient, String date) {
+         for(Treatment treatment: treatments){
+             if(treatment.getPatientName().equals(patient)&&treatment.getDateTimeOfTreatment().equals(date) && treatment.getStatus().equals("Booked")){
+                 return true;
+             }
+         }
+         return false;
+
+     
+     }
+
+    /**
+     * @param dateTimeOfTreatment the dateTimeOfTreatment to set
+     */
+    public void setDateTimeOfTreatment(String dateTimeOfTreatment) {
+        this.dateTimeOfTreatment = dateTimeOfTreatment;
     }
 }

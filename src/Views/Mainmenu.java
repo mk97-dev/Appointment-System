@@ -329,6 +329,9 @@ public class Mainmenu extends javax.swing.JFrame {
         physician3.setAddress("17 Calver Avenue");
         physician3.setPhoneNumber(1233);
         physician3.setConsultationHours("16-03-2021 19:00:00");
+        physician3.setConsultationHours("16-03-2021 19:30:00");
+        physician3.setConsultationHours("16-03-2021 20:00:00");
+        physician3.setConsultationHours("16-03-2021 20:30:00");
         physician3.addExpertise("Physiotherapy");
         physician3.setTimeTable("07-03-2021 09:00:00", "Physiotherapy");
         physician3.setTimeTable("07-03-2021 11:00:00", "Physiotherapy");

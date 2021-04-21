@@ -5,12 +5,21 @@
  */
 package Views;
 
+import java.awt.Component;
+import java.util.ArrayList;
+import java.util.Map;
+import javax.swing.JOptionPane;
+import physiotherapy.sports.injury.centre.psic.Physician;
+import physiotherapy.sports.injury.centre.psic.Room;
+import physiotherapy.sports.injury.centre.psic.Slots;
+import physiotherapy.sports.injury.centre.psic.Treatment;
+
 /**
  *
  * @author Mubeen Khan
  */
 public class VisitorView extends javax.swing.JFrame {
-
+        String visitor;
     /**
      * Creates new form VisitorView
      */
@@ -27,21 +36,1009 @@ public class VisitorView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        txtVisitorName = new javax.swing.JTextField();
+        btnVisitorLogin = new javax.swing.JButton();
+        btnBackPatientLogin = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        btnAppointmentByExpertise = new javax.swing.JButton();
+        btnAppointmentByPhysician = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        btnBackPatientview = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        comboBoxPhysicians = new javax.swing.JComboBox<>();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        lblTreatment = new javax.swing.JLabel();
+        comboBoxTreatments = new javax.swing.JComboBox<>();
+        btnSelectTreatment = new javax.swing.JButton();
+        btnSelectedPhysician = new javax.swing.JButton();
+        lblDate = new javax.swing.JLabel();
+        comboBoxDate = new javax.swing.JComboBox<>();
+        btnBook = new javax.swing.JButton();
+        btnBackBook = new javax.swing.JButton();
+        lblRooms = new javax.swing.JLabel();
+        comboBoxRooms = new javax.swing.JComboBox<>();
+        btnSelectDate = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtAreaBookings = new javax.swing.JTextArea();
+        btnChangeBooking = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        comboBoxAppointments = new javax.swing.JComboBox<>();
+
+        jLabel5 = new javax.swing.JLabel();
+        lblSelectAppointment = new javax.swing.JLabel();
+        btnBackBook1 = new javax.swing.JButton();
+        btnCancelBooking = new javax.swing.JButton();
+        btnEditBooking = new javax.swing.JButton();
+        jPanelChangeAppointment = new javax.swing.JPanel();
+        lblChangeAppointment = new javax.swing.JLabel();
+        comboBoxChangeAppointment = new javax.swing.JComboBox<>();
+        btnChangeAppointment = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        comboBoxTreatments1 = new javax.swing.JComboBox<>();
+
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        lblPhysician1 = new javax.swing.JLabel();
+        comboBoxPhysicians1 = new javax.swing.JComboBox<>();
+        btnSelectPhysician1 = new javax.swing.JButton();
+        btnSelectTreatment1 = new javax.swing.JButton();
+        lblDate1 = new javax.swing.JLabel();
+        comboBoxDate1 = new javax.swing.JComboBox<>();
+        btnBook1 = new javax.swing.JButton();
+        btnBackBook2 = new javax.swing.JButton();
+        lblRooms1 = new javax.swing.JLabel();
+        comboBoxRooms1 = new javax.swing.JComboBox<>();
+        btnSelectDate1 = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("Enter you name");
+
+        btnVisitorLogin.setText("Login");
+        btnVisitorLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVisitorLoginActionPerformed(evt);
+            }
+        });
+
+        btnBackPatientLogin.setText("Back");
+        btnBackPatientLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackPatientLoginActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(87, 87, 87)
+                        .addComponent(jLabel1)
+                        .addGap(40, 40, 40)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnVisitorLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtVisitorName, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnBackPatientLogin)))
+                .addContainerGap(301, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnBackPatientLogin)
+                .addGap(57, 57, 57)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtVisitorName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addComponent(btnVisitorLogin)
+                .addContainerGap(204, Short.MAX_VALUE))
         );
+
+        jTabbedPane1.addTab("tab1", jPanel1);
+
+        btnAppointmentByExpertise.setText("Book Appointment by Expertise");
+        btnAppointmentByExpertise.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAppointmentByExpertiseActionPerformed(evt);
+            }
+        });
+
+        btnAppointmentByPhysician.setText("Book Appointment by Physician");
+        btnAppointmentByPhysician.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAppointmentByPhysicianActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("View Booking");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        btnBackPatientview.setText("Back");
+        btnBackPatientview.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackPatientviewActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnBackPatientview))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(184, 184, 184)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnAppointmentByPhysician, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnAppointmentByExpertise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(232, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(btnBackPatientview)
+                .addGap(47, 47, 47)
+                .addComponent(btnAppointmentByPhysician)
+                .addGap(18, 18, 18)
+                .addComponent(btnAppointmentByExpertise)
+                .addGap(18, 18, 18)
+                .addComponent(jButton4)
+                .addContainerGap(163, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("tab1", jPanel2);
+
+        comboBoxTreatments.setVisible(false); lblTreatment.setVisible(false); btnSelectTreatment.setVisible(false); comboBoxDate.setVisible(false); lblDate.setVisible(false); btnBook.setVisible(false);
+
+        comboBoxPhysicians.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                comboBoxPhysiciansItemStateChanged(evt);
+            }
+        });
+        comboBoxPhysicians.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                comboBoxPhysiciansMouseClicked(evt);
+            }
+        });
+        comboBoxPhysicians.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBoxPhysiciansActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Book Appointment");
+
+        jLabel3.setText("Select Physician");
+
+        lblTreatment.setText("Select Treatment");
+
+        comboBoxTreatments.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBoxTreatments.setFocusable(false);
+
+        btnSelectTreatment.setText("Next");
+        btnSelectTreatment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSelectTreatmentActionPerformed(evt);
+            }
+        });
+
+        btnSelectedPhysician.setText("Next");
+        btnSelectedPhysician.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSelectedPhysicianActionPerformed(evt);
+            }
+        });
+
+        lblDate.setText("Select Date/Time");
+
+        comboBoxDate.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        btnBook.setText("Book");
+        btnBook.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBookActionPerformed(evt);
+            }
+        });
+
+        btnBackBook.setText("Back");
+        btnBackBook.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackBookActionPerformed(evt);
+            }
+        });
+
+        lblRooms.setText("Select Room");
+
+        comboBoxRooms.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        btnSelectDate.setText("Next");
+        btnSelectDate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSelectDateActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnBackBook)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(150, 150, 150))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblTreatment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(lblDate)
+                            .addComponent(lblRooms))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(comboBoxPhysicians, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(comboBoxTreatments, 0, 442, Short.MAX_VALUE)
+                            .addComponent(comboBoxDate, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(comboBoxRooms, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnSelectTreatment, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSelectedPhysician, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnBook, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSelectDate, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(42, 42, 42))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(btnBackBook))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboBoxPhysicians, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnSelectedPhysician)
+                .addGap(10, 10, 10)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(comboBoxTreatments, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTreatment, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnSelectTreatment)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDate)
+                    .addComponent(comboBoxDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnSelectDate)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(comboBoxRooms, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblRooms))
+                .addGap(8, 8, 8)
+                .addComponent(btnBook)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("tab1", jPanel3);
+
+        comboBoxTreatments.setVisible(false); lblTreatment.setVisible(false); btnSelectTreatment.setVisible(false); comboBoxDate.setVisible(false); lblDate.setVisible(false); btnBook.setVisible(false);
+
+        txtAreaBookings.setColumns(20);
+        txtAreaBookings.setRows(5);
+        txtAreaBookings.setText("No Booking Available");
+        jScrollPane1.setViewportView(txtAreaBookings);
+
+        btnChangeBooking.setText("change booking");
+        btnChangeBooking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnChangeBookingActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 601, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnChangeBooking)))
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(70, Short.MAX_VALUE)
+                .addComponent(btnChangeBooking)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("tab1", jPanel4);
+
+        comboBoxTreatments.setVisible(false); lblTreatment.setVisible(false); btnSelectTreatment.setVisible(false); comboBoxDate.setVisible(false); lblDate.setVisible(false); btnBook.setVisible(false);
+
+        comboBoxAppointments.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                comboBoxAppointmentsItemStateChanged(evt);
+            }
+        });
+        comboBoxAppointments.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                comboBoxAppointmentsMouseClicked(evt);
+            }
+        });
+        comboBoxAppointments.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBoxAppointmentsActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setText("EDIT APPOINTMENT");
+
+        lblSelectAppointment.setText("Select Appointment");
+
+        btnBackBook1.setText("Back");
+        btnBackBook1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackBook1ActionPerformed(evt);
+            }
+        });
+
+        btnCancelBooking.setText("Cancel");
+        btnCancelBooking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelBookingActionPerformed(evt);
+            }
+        });
+
+        btnEditBooking.setText("Edit");
+        btnEditBooking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditBookingActionPerformed(evt);
+            }
+        });
+
+        lblChangeAppointment.setText("Select Date");
+
+        btnChangeAppointment.setText("Change");
+        btnChangeAppointment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnChangeAppointmentActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelChangeAppointmentLayout = new javax.swing.GroupLayout(jPanelChangeAppointment);
+        jPanelChangeAppointment.setLayout(jPanelChangeAppointmentLayout);
+        jPanelChangeAppointmentLayout.setHorizontalGroup(
+            jPanelChangeAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelChangeAppointmentLayout.createSequentialGroup()
+                .addGroup(jPanelChangeAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanelChangeAppointmentLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnChangeAppointment))
+                    .addGroup(jPanelChangeAppointmentLayout.createSequentialGroup()
+                        .addComponent(lblChangeAppointment)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                        .addComponent(comboBoxChangeAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(48, 48, 48))
+        );
+        jPanelChangeAppointmentLayout.setVerticalGroup(
+            jPanelChangeAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelChangeAppointmentLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(jPanelChangeAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblChangeAppointment)
+                    .addComponent(comboBoxChangeAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnChangeAppointment)
+                .addContainerGap(126, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnBackBook1)
+                .addGap(191, 191, 191)
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanelChangeAppointment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblSelectAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCancelBooking))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(comboBoxAppointments, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(42, 42, 42))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(btnEditBooking, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnBackBook1)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblSelectAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboBoxAppointments, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCancelBooking)
+                    .addComponent(btnEditBooking))
+                .addGap(18, 18, 18)
+                .addComponent(jPanelChangeAppointment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("tab1", jPanel5);
+
+        comboBoxTreatments.setVisible(false); lblTreatment.setVisible(false); btnSelectTreatment.setVisible(false); comboBoxDate.setVisible(false); lblDate.setVisible(false); btnBook.setVisible(false);
+
+        comboBoxTreatments1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rehabilitation", "Physiotherapy", "Osteopathy" }));
+        comboBoxTreatments1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                comboBoxTreatments1ItemStateChanged(evt);
+            }
+        });
+        comboBoxTreatments1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                comboBoxTreatments1MouseClicked(evt);
+            }
+        });
+        comboBoxTreatments1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBoxTreatments1ActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setText("Book Appointment");
+
+        jLabel7.setText("Select Treatment");
+
+        lblPhysician1.setText("Select Physician");
+
+        comboBoxPhysicians1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBoxPhysicians1.setFocusable(false);
+
+        btnSelectPhysician1.setText("Next");
+        btnSelectPhysician1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSelectPhysician1ActionPerformed(evt);
+            }
+        });
+
+        btnSelectTreatment1.setText("Next");
+        btnSelectTreatment1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSelectTreatment1ActionPerformed(evt);
+            }
+        });
+
+        lblDate1.setText("Select Date/Time");
+
+        comboBoxDate1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBoxDate1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBoxDate1ActionPerformed(evt);
+            }
+        });
+
+        btnBook1.setText("Book");
+        btnBook1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBook1ActionPerformed(evt);
+            }
+        });
+
+        btnBackBook2.setText("Back");
+        btnBackBook2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackBook2ActionPerformed(evt);
+            }
+        });
+
+        lblRooms1.setText("Select Room");
+
+        comboBoxRooms1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        btnSelectDate1.setText("Next");
+        btnSelectDate1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSelectDate1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnBackBook2)
+                .addGap(173, 173, 173)
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblPhysician1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(lblDate1)
+                            .addComponent(lblRooms1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(comboBoxTreatments1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(comboBoxPhysicians1, 0, 442, Short.MAX_VALUE)
+                            .addComponent(comboBoxDate1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(comboBoxRooms1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnSelectPhysician1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSelectTreatment1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnBook1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSelectDate1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(42, 42, 42))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(btnBackBook2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboBoxTreatments1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnSelectTreatment1)
+                .addGap(10, 10, 10)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(comboBoxPhysicians1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPhysician1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnSelectPhysician1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDate1)
+                    .addComponent(comboBoxDate1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnSelectDate1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(comboBoxRooms1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblRooms1))
+                .addGap(8, 8, 8)
+                .addComponent(btnBook1)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("tab1", jPanel6);
+
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -31, 630, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVisitorLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisitorLoginActionPerformed
+        // TODO add your handling code here:
+        //jTabbedPane1.setSelectedIndex(1);
+        visitor = txtVisitorName.getText();
+            jTabbedPane1.setSelectedIndex(1);
+
+    }//GEN-LAST:event_btnVisitorLoginActionPerformed
+
+    private void btnBackPatientLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackPatientLoginActionPerformed
+        // TODO add your handling code here:
+        Mainmenu newView = new Mainmenu();
+        newView.setVisible(true);
+        setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_btnBackPatientLoginActionPerformed
+
+    private void btnAppointmentByExpertiseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAppointmentByExpertiseActionPerformed
+        // TODO add your handling code here:
+        lblPhysician1.setVisible(false);
+        comboBoxPhysicians1.setVisible(false);
+        btnSelectPhysician1.setVisible(false);
+        lblDate1.setVisible(false);
+        comboBoxDate1.setVisible(false);
+        btnSelectDate1.setVisible(false);
+        lblRooms1.setVisible(false);
+        comboBoxRooms1.setVisible(false);
+        btnBook1.setVisible(false);
+
+        jTabbedPane1.setSelectedIndex(5);
+    }//GEN-LAST:event_btnAppointmentByExpertiseActionPerformed
+
+    private void btnAppointmentByPhysicianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAppointmentByPhysicianActionPerformed
+        // TODO add your handling code here:
+        lblTreatment.setVisible(false);
+        comboBoxTreatments.setVisible(false);
+        btnSelectTreatment.setVisible(false);
+        lblDate.setVisible(false);
+        comboBoxDate.setVisible(false);
+        btnSelectDate.setVisible(false);
+        lblRooms.setVisible(false);
+        comboBoxRooms.setVisible(false);
+        btnBook.setVisible(false);
+        comboBoxPhysicians.removeAllItems();
+        for (Physician physician : Physician.getPhysicians()) {
+            comboBoxPhysicians.addItem(physician.getFullName());
+        }
+        jTabbedPane1.setSelectedIndex(2);
+    }//GEN-LAST:event_btnAppointmentByPhysicianActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        jTabbedPane1.setSelectedIndex(3);
+        String s = "Treatment\tPhysician\tTime\t\tPatient\tStatus\n";
+        for (Treatment treatment : Treatment.getTreatments()) {
+            if (treatment.getPatientName().equals(visitor)) {
+                s += treatment.getTreatmentName() + "\t" + treatment.getPhysicianName() + "\t" + treatment.getDateTimeOfTreatment() + "\t" + treatment.getPatientName() + "\t" + treatment.getStatus() + "\n";
+
+            }
+        }
+        if(s.equals("Treatment\tPhysician\tTime\t\tPatient\tStatus\n")){
+            txtAreaBookings.setText("No Bookings for this Patient");
+        }
+        else{
+            txtAreaBookings.setText(s);
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void btnBackPatientviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackPatientviewActionPerformed
+        // TODO add your handling code here:
+        jTabbedPane1.setSelectedIndex(0);
+    }//GEN-LAST:event_btnBackPatientviewActionPerformed
+
+    private void comboBoxPhysiciansItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_comboBoxPhysiciansItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxPhysiciansItemStateChanged
+
+    private void comboBoxPhysiciansMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comboBoxPhysiciansMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxPhysiciansMouseClicked
+
+    private void comboBoxPhysiciansActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxPhysiciansActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxPhysiciansActionPerformed
+
+    private void btnSelectTreatmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectTreatmentActionPerformed
+        // TODO add your handling code here:
+        lblDate.setVisible(true);
+        comboBoxDate.setVisible(true);
+        comboBoxDate.removeAllItems();
+        btnSelectDate.setVisible(true);
+
+        for (Physician physician : Physician.getPhysicians()) {
+            if (physician.getFullName().equals(comboBoxPhysicians.getSelectedItem())) {
+               for (Map.Entry<String, String> entry : physician.getConsultationHours().entrySet()) {
+                    if (entry.getValue().equals("Available")) {
+                        comboBoxDate.addItem(entry.getKey());
+                    }
+
+                }
+
+            }
+        }
+    }//GEN-LAST:event_btnSelectTreatmentActionPerformed
+
+    private void btnSelectedPhysicianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectedPhysicianActionPerformed
+        // TODO add your handling code here:
+        lblTreatment.setVisible(true);
+        comboBoxTreatments.setVisible(true);
+        comboBoxTreatments.removeAllItems();
+        btnSelectTreatment.setVisible(true);
+
+        for (Physician physician : Physician.getPhysicians()) {
+            if (physician.getFullName().equals(comboBoxPhysicians.getSelectedItem())) {
+                for (int i = 0; i < physician.getExpertise().size(); i++) {
+                    comboBoxTreatments.addItem(physician.getExpertise().get(i));
+                }
+            }
+        }
+    }//GEN-LAST:event_btnSelectedPhysicianActionPerformed
+
+    private void btnBookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBookActionPerformed
+        // TODO add your handling code here:
+
+        for (Physician physician : Physician.getPhysicians()) {
+            if (physician.getFullName().equals(comboBoxPhysicians.getSelectedItem())) {
+                for (Map.Entry<String, String> entry : physician.getConsultationHours().entrySet()) {
+                    if (entry.getValue().equals("Available") && entry.getKey().equals(comboBoxDate.getSelectedItem())) {
+                        
+                        entry.setValue("Booked");
+                        Component frame = null;
+                        JOptionPane.showMessageDialog(frame,
+                            "Appointment Booked",
+                            "Booking",
+                            JOptionPane.INFORMATION_MESSAGE);
+                        Treatment newTreatment = new Treatment(String.valueOf(comboBoxTreatments.getSelectedItem()), String.valueOf(comboBoxDate.getSelectedItem()), String.valueOf(comboBoxPhysicians.getSelectedItem()), visitor, String.valueOf(comboBoxRooms.getSelectedItem()));
+                        comboBoxDate.removeItem(entry.getKey());
+                        break;
+                    }
+
+                }
+
+            }
+        }
+    }//GEN-LAST:event_btnBookActionPerformed
+
+    private void btnBackBookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackBookActionPerformed
+        // TODO add your handling code here:
+        jTabbedPane1.setSelectedIndex(1);
+    }//GEN-LAST:event_btnBackBookActionPerformed
+
+    private void btnSelectDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectDateActionPerformed
+        // TODO add your handling code here:
+        lblRooms.setVisible(true);
+        comboBoxRooms.setVisible(true);
+        comboBoxRooms.removeAllItems();
+        btnBook.setVisible(true);
+        for (Room room : Room.getRooms()) {
+            comboBoxRooms.addItem(room.getRoomName());
+            for (Treatment treatment : Treatment.getTreatments()) {
+                if ((treatment.getRoom().equals(room.getRoomName())) && (treatment.getDateTimeOfTreatment().equals(comboBoxDate.getSelectedItem()))&& treatment.getStatus().equals("Booked")) {
+                    comboBoxRooms.removeItem(room.getRoomName());
+                }
+            }
+
+        }
+    }//GEN-LAST:event_btnSelectDateActionPerformed
+
+    private void btnChangeBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeBookingActionPerformed
+        // TODO add your handling code here:
+        jPanelChangeAppointment.setVisible(false);
+        comboBoxAppointments.removeAllItems();
+        for (Treatment treatment : Treatment.getTreatments()) {
+            if (treatment.getPatientName().equals(visitor) && (treatment.getStatus().equals("Booked")||treatment.getStatus().equals("Changed"))) {
+                comboBoxAppointments.addItem(treatment.getDateTimeOfTreatment());
+            }
+        }
+        jTabbedPane1.setSelectedIndex(4);
+    }//GEN-LAST:event_btnChangeBookingActionPerformed
+
+    private void comboBoxAppointmentsItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_comboBoxAppointmentsItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxAppointmentsItemStateChanged
+
+    private void comboBoxAppointmentsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comboBoxAppointmentsMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxAppointmentsMouseClicked
+
+    private void comboBoxAppointmentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxAppointmentsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxAppointmentsActionPerformed
+
+    private void btnBackBook1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackBook1ActionPerformed
+        // TODO add your handling code here:
+        jTabbedPane1.setSelectedIndex(1);
+    }//GEN-LAST:event_btnBackBook1ActionPerformed
+
+    private void btnCancelBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelBookingActionPerformed
+        // TODO add your handling code here:
+        for (Treatment treatment : Treatment.getTreatments()) {
+            if (treatment.getDateTimeOfTreatment().equals(comboBoxAppointments.getSelectedItem())) {
+                treatment.setStatus("Cancelled");
+                for (Physician physician : Physician.getPhysicians()) {
+                    if (physician.getFullName().equals(treatment.getPhysicianName())) {
+                        for (Map.Entry<String, String> entry : physician.getConsultationHours().entrySet()) {
+                            if (entry.getValue().equals("Booked") && entry.getKey().equals(comboBoxAppointments.getSelectedItem())) {
+                                entry.setValue("Available");
+                                Component frame = null;
+                                JOptionPane.showMessageDialog(frame,
+                                    "Appointment Cancelled",
+                                    "Booking",
+                                    JOptionPane.INFORMATION_MESSAGE);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }//GEN-LAST:event_btnCancelBookingActionPerformed
+
+    private void btnEditBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditBookingActionPerformed
+        // TODO add your handling code here:
+        comboBoxChangeAppointment.removeAllItems();
+        for (Treatment treatment : Treatment.getTreatments()) {
+            if (treatment.getDateTimeOfTreatment().equals(comboBoxAppointments.getSelectedItem())) {
+
+                for (Physician physician : Physician.getPhysicians()) {
+                    if (physician.getFullName().equals(treatment.getPhysicianName())) {
+                        for (Map.Entry<String, String> entry : physician.getConsultationHours().entrySet()) {
+                            if (entry.getValue().equals("Available")) {
+                                comboBoxChangeAppointment.addItem(entry.getKey());
+                                jPanelChangeAppointment.setVisible(true);
+
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }//GEN-LAST:event_btnEditBookingActionPerformed
+
+    private void btnChangeAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeAppointmentActionPerformed
+        // TODO add your handling code here:
+        for (Treatment treatment : Treatment.getTreatments()) {
+            if (treatment.getDateTimeOfTreatment().equals(comboBoxAppointments.getSelectedItem())) {
+
+                for (Physician physician : Physician.getPhysicians()) {
+                    if (physician.getFullName().equals(treatment.getPhysicianName())) {
+                        for (Map.Entry<String, String> entry : physician.getConsultationHours().entrySet()) {
+                            if (entry.getValue().equals("Booked")&& entry.getKey().equals(comboBoxAppointments.getSelectedItem())) {
+
+                                entry.setValue("Available");
+                                treatment.setStatus("Changed");
+                                treatment.setDateTimeOfTreatment(String.valueOf(comboBoxChangeAppointment.getSelectedItem()));
+                                
+                            }
+                            if (entry.getValue().equals("Available") && entry.getKey().equals(comboBoxChangeAppointment.getSelectedItem())) {
+                                //comboBoxDate.removeItem(entry.getKey().getSlotDateTime());
+                                entry.setValue("Booked");
+                                Component frame = null;
+                                JOptionPane.showMessageDialog(frame,
+                                    "Appointment Changed",
+                                    "Booking",
+                                    JOptionPane.INFORMATION_MESSAGE);
+                                jTabbedPane1.setSelectedIndex(1);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }//GEN-LAST:event_btnChangeAppointmentActionPerformed
+
+    private void comboBoxTreatments1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_comboBoxTreatments1ItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxTreatments1ItemStateChanged
+
+    private void comboBoxTreatments1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comboBoxTreatments1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxTreatments1MouseClicked
+
+    private void comboBoxTreatments1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxTreatments1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxTreatments1ActionPerformed
+
+    private void btnSelectPhysician1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectPhysician1ActionPerformed
+        // TODO add your handling code here:
+        lblDate1.setVisible(true);
+        comboBoxDate1.setVisible(true);
+        btnSelectDate1.setVisible(true);
+        comboBoxDate1.removeAllItems();
+        for (Physician physician : Physician.getPhysicians()) {
+            if (physician.getFullName().equals(comboBoxPhysicians.getSelectedItem())) {
+               for (Map.Entry<String, String> entry : physician.getConsultationHours().entrySet()) {
+                    if (entry.getValue().equals("Available")) {
+                        comboBoxDate.addItem(entry.getKey());
+                    }
+
+                }
+
+            }
+        }
+
+    }//GEN-LAST:event_btnSelectPhysician1ActionPerformed
+
+    private void btnSelectTreatment1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectTreatment1ActionPerformed
+        // TODO add your handling code here:
+        lblPhysician1.setVisible(true);
+        comboBoxPhysicians1.setVisible(true);
+        btnSelectPhysician1.setVisible(true);
+        comboBoxPhysicians1.removeAllItems();
+        for (Physician physician : Physician.getPhysicians()) {
+            if(physician.getExpertise().contains(String.valueOf(comboBoxTreatments1.getSelectedItem()))){
+                comboBoxPhysicians1.addItem(physician.getFullName());
+            }
+        }
+    }//GEN-LAST:event_btnSelectTreatment1ActionPerformed
+
+    private void btnBook1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBook1ActionPerformed
+        // TODO add your handling code here:
+        for (Physician physician : Physician.getPhysicians()) {
+            if (physician.getFullName().equals(comboBoxPhysicians1.getSelectedItem())) {
+                for (Map.Entry<String, String> entry : physician.getConsultationHours().entrySet()) {
+                    if (entry.getValue().equals("Available") &&entry.getKey().equals(comboBoxDate1.getSelectedItem())) {
+
+                        entry.setValue("Booked");
+                        Component frame = null;
+                        JOptionPane.showMessageDialog(frame,
+                            "Appointment Booked",
+                            "Booking",
+                            JOptionPane.INFORMATION_MESSAGE);
+                        Treatment newTreatment = new Treatment(String.valueOf(comboBoxTreatments1.getSelectedItem()), String.valueOf(comboBoxDate1.getSelectedItem()), String.valueOf(comboBoxPhysicians1.getSelectedItem()), visitor, String.valueOf(comboBoxRooms1.getSelectedItem()));
+                        comboBoxDate1.removeItem(entry.getKey());
+                        break;
+                    }
+
+                }
+
+            }
+        }
+    }//GEN-LAST:event_btnBook1ActionPerformed
+
+    private void btnBackBook2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackBook2ActionPerformed
+        // TODO add your handling code here:
+        jTabbedPane1.setSelectedIndex(1);
+    }//GEN-LAST:event_btnBackBook2ActionPerformed
+
+    private void btnSelectDate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectDate1ActionPerformed
+        // TODO add your handling code here:
+        lblRooms1.setVisible(true);
+        comboBoxRooms1.setVisible(true);
+        btnBook1.setVisible(true);
+        comboBoxRooms1.removeAllItems();
+        for (Room room : Room.getRooms()) {
+            comboBoxRooms1.addItem(room.getRoomName());
+            for (Treatment treatment : Treatment.getTreatments()) {
+                if ((treatment.getRoom().equals(room.getRoomName())) && (treatment.getDateTimeOfTreatment().equals(comboBoxDate1.getSelectedItem()))&& treatment.getStatus().equals("Booked")) {
+                    comboBoxRooms1.removeItem(room.getRoomName());
+                }
+            }
+
+        }
+    }//GEN-LAST:event_btnSelectDate1ActionPerformed
+
+    private void comboBoxDate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxDate1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxDate1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +1076,61 @@ public class VisitorView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAppointmentByExpertise;
+    private javax.swing.JButton btnAppointmentByPhysician;
+    private javax.swing.JButton btnBackBook;
+    private javax.swing.JButton btnBackBook1;
+    private javax.swing.JButton btnBackBook2;
+    private javax.swing.JButton btnBackPatientLogin;
+    private javax.swing.JButton btnBackPatientview;
+    private javax.swing.JButton btnBook;
+    private javax.swing.JButton btnBook1;
+    private javax.swing.JButton btnCancelBooking;
+    private javax.swing.JButton btnChangeAppointment;
+    private javax.swing.JButton btnChangeBooking;
+    private javax.swing.JButton btnEditBooking;
+    private javax.swing.JButton btnSelectDate;
+    private javax.swing.JButton btnSelectDate1;
+    private javax.swing.JButton btnSelectPhysician1;
+    private javax.swing.JButton btnSelectTreatment;
+    private javax.swing.JButton btnSelectTreatment1;
+    private javax.swing.JButton btnSelectedPhysician;
+    private javax.swing.JButton btnVisitorLogin;
+    private javax.swing.JComboBox<String> comboBoxAppointments;
+    private javax.swing.JComboBox<String> comboBoxChangeAppointment;
+    private javax.swing.JComboBox<String> comboBoxDate;
+    private javax.swing.JComboBox<String> comboBoxDate1;
+    private javax.swing.JComboBox<String> comboBoxPhysicians;
+    private javax.swing.JComboBox<String> comboBoxPhysicians1;
+    private javax.swing.JComboBox<String> comboBoxRooms;
+    private javax.swing.JComboBox<String> comboBoxRooms1;
+    private javax.swing.JComboBox<String> comboBoxTreatments;
+    private javax.swing.JComboBox<String> comboBoxTreatments1;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanelChangeAppointment;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel lblChangeAppointment;
+    private javax.swing.JLabel lblDate;
+    private javax.swing.JLabel lblDate1;
+    private javax.swing.JLabel lblPhysician1;
+    private javax.swing.JLabel lblRooms;
+    private javax.swing.JLabel lblRooms1;
+    private javax.swing.JLabel lblSelectAppointment;
+    private javax.swing.JLabel lblTreatment;
+    private javax.swing.JTextArea txtAreaBookings;
+    private javax.swing.JTextField txtVisitorName;
     // End of variables declaration//GEN-END:variables
 }
