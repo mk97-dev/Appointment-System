@@ -340,13 +340,13 @@ public class AdminView extends javax.swing.JFrame {
         panelSelectReport.setLayout(panelSelectReportLayout);
         panelSelectReportLayout.setHorizontalGroup(
             panelSelectReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelSelectReportLayout.createSequentialGroup()
-                .addGap(187, 187, 187)
-                .addGroup(panelSelectReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(287, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelSelectReportLayout.createSequentialGroup()
+                .addContainerGap(253, Short.MAX_VALUE)
+                .addGroup(panelSelectReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton7)
+                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(221, 221, 221))
         );
         panelSelectReportLayout.setVerticalGroup(
             panelSelectReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -507,8 +507,14 @@ public class AdminView extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        jTabbedPane1.setSelectedIndex(1);
-        jTabbedPane1.repaint();
+        //.setSelectedIndex(1);
+        //jTabbedPane1.repaint();
+        Component frame = null;
+                            JOptionPane.showMessageDialog(frame,
+                                    "This funtionality will be implemented in the next release. Thanks for your patience.",
+                                    "ADD Physician",
+                                    JOptionPane.INFORMATION_MESSAGE);
+        
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -568,7 +574,7 @@ public class AdminView extends javax.swing.JFrame {
 
         }
         if (s.equals("Treatment\tPhysician\tTime\t\tPatient\tStatus\n")) {
-            txtAreaBookings.setText("No Bookings for this Patient");
+            txtAreaBookings.setText("No Bookings to show");
         } else {
             txtAreaBookings.setText(s);
         }

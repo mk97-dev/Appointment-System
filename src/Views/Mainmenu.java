@@ -110,6 +110,7 @@ public class Mainmenu extends javax.swing.JFrame {
         newView.setVisible(true);
         setVisible(false);
         this.dispose();
+        
     }//GEN-LAST:event_btnPhysicianMenuActionPerformed
 
     private void btnAdminMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminMenuActionPerformed
@@ -328,16 +329,8 @@ public class Mainmenu extends javax.swing.JFrame {
         physician3.setFullName("Dr Isaac");
         physician3.setAddress("17 Calver Avenue");
         physician3.setPhoneNumber(1233);
-        physician3.setConsultationHours("16-03-2021 19:00:00");
-        physician3.setConsultationHours("16-03-2021 19:30:00");
-        physician3.setConsultationHours("16-03-2021 20:00:00");
-        physician3.setConsultationHours("16-03-2021 20:30:00");
+        physician3.setConsultationHours("09-03-2021 19:00:00");
         physician3.addExpertise("Physiotherapy");
-        physician3.setTimeTable("07-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("07-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("07-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("07-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("07-03-2021 17:00:00", "Physiotherapy");
         physician3.setTimeTable("08-03-2021 09:00:00", "Physiotherapy");
         physician3.setTimeTable("08-03-2021 11:00:00", "Physiotherapy");
         physician3.setTimeTable("08-03-2021 13:00:00", "Physiotherapy");
@@ -348,11 +341,11 @@ public class Mainmenu extends javax.swing.JFrame {
         physician3.setTimeTable("09-03-2021 13:00:00", "Physiotherapy");
         physician3.setTimeTable("09-03-2021 15:00:00", "Physiotherapy");
         physician3.setTimeTable("09-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("14-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("14-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("14-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("14-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("14-03-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-03-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-03-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-03-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-03-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-03-2021 17:00:00", "Physiotherapy");
         physician3.setTimeTable("15-03-2021 09:00:00", "Physiotherapy");
         physician3.setTimeTable("15-03-2021 11:00:00", "Physiotherapy");
         physician3.setTimeTable("15-03-2021 13:00:00", "Physiotherapy");
@@ -363,11 +356,11 @@ public class Mainmenu extends javax.swing.JFrame {
         physician3.setTimeTable("16-03-2021 13:00:00", "Physiotherapy");
         physician3.setTimeTable("16-03-2021 15:00:00", "Physiotherapy");
         physician3.setTimeTable("16-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("21-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("21-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("21-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("21-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("21-03-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-03-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-03-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-03-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-03-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-03-2021 17:00:00", "Physiotherapy");
         physician3.setTimeTable("22-03-2021 09:00:00", "Physiotherapy");
         physician3.setTimeTable("22-03-2021 11:00:00", "Physiotherapy");
         physician3.setTimeTable("22-03-2021 13:00:00", "Physiotherapy");
@@ -378,11 +371,11 @@ public class Mainmenu extends javax.swing.JFrame {
         physician3.setTimeTable("23-03-2021 13:00:00", "Physiotherapy");
         physician3.setTimeTable("23-03-2021 15:00:00", "Physiotherapy");
         physician3.setTimeTable("23-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("28-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("28-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("28-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("28-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("28-03-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-03-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-03-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-03-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-03-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-03-2021 17:00:00", "Physiotherapy");
         physician3.setTimeTable("29-03-2021 09:00:00", "Physiotherapy");
         physician3.setTimeTable("29-03-2021 11:00:00", "Physiotherapy");
         physician3.setTimeTable("29-03-2021 13:00:00", "Physiotherapy");
@@ -393,6 +386,11 @@ public class Mainmenu extends javax.swing.JFrame {
         physician3.setTimeTable("30-03-2021 13:00:00", "Physiotherapy");
         physician3.setTimeTable("30-03-2021 15:00:00", "Physiotherapy");
         physician3.setTimeTable("30-03-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("31-03-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("31-03-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("31-03-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("31-03-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("31-03-2021 17:00:00", "Physiotherapy");
         physician3.setPhysicianId();
         Physician.setPhysicians(physician3);
 

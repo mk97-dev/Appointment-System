@@ -7,6 +7,7 @@ package physiotherapy.sports.injury.centre.psic;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -27,13 +28,8 @@ public class PhysicianTest {
         physician3.setFullName("Dr Isaac");
         physician3.setAddress("17 Calver Avenue");
         physician3.setPhoneNumber(1233);
-        physician3.setConsultationHours("16-03-2021 19:00:00");
+        physician3.setConsultationHours("09-03-2021 19:00:00");
         physician3.addExpertise("Physiotherapy");
-        physician3.setTimeTable("07-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("07-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("07-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("07-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("07-03-2021 17:00:00", "Physiotherapy");
         physician3.setTimeTable("08-03-2021 09:00:00", "Physiotherapy");
         physician3.setTimeTable("08-03-2021 11:00:00", "Physiotherapy");
         physician3.setTimeTable("08-03-2021 13:00:00", "Physiotherapy");
@@ -44,11 +40,11 @@ public class PhysicianTest {
         physician3.setTimeTable("09-03-2021 13:00:00", "Physiotherapy");
         physician3.setTimeTable("09-03-2021 15:00:00", "Physiotherapy");
         physician3.setTimeTable("09-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("14-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("14-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("14-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("14-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("14-03-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-03-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-03-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-03-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-03-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-03-2021 17:00:00", "Physiotherapy");
         physician3.setTimeTable("15-03-2021 09:00:00", "Physiotherapy");
         physician3.setTimeTable("15-03-2021 11:00:00", "Physiotherapy");
         physician3.setTimeTable("15-03-2021 13:00:00", "Physiotherapy");
@@ -59,11 +55,11 @@ public class PhysicianTest {
         physician3.setTimeTable("16-03-2021 13:00:00", "Physiotherapy");
         physician3.setTimeTable("16-03-2021 15:00:00", "Physiotherapy");
         physician3.setTimeTable("16-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("21-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("21-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("21-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("21-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("21-03-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-03-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-03-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-03-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-03-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-03-2021 17:00:00", "Physiotherapy");
         physician3.setTimeTable("22-03-2021 09:00:00", "Physiotherapy");
         physician3.setTimeTable("22-03-2021 11:00:00", "Physiotherapy");
         physician3.setTimeTable("22-03-2021 13:00:00", "Physiotherapy");
@@ -74,11 +70,11 @@ public class PhysicianTest {
         physician3.setTimeTable("23-03-2021 13:00:00", "Physiotherapy");
         physician3.setTimeTable("23-03-2021 15:00:00", "Physiotherapy");
         physician3.setTimeTable("23-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("28-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("28-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("28-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("28-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("28-03-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-03-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-03-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-03-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-03-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-03-2021 17:00:00", "Physiotherapy");
         physician3.setTimeTable("29-03-2021 09:00:00", "Physiotherapy");
         physician3.setTimeTable("29-03-2021 11:00:00", "Physiotherapy");
         physician3.setTimeTable("29-03-2021 13:00:00", "Physiotherapy");
@@ -89,6 +85,11 @@ public class PhysicianTest {
         physician3.setTimeTable("30-03-2021 13:00:00", "Physiotherapy");
         physician3.setTimeTable("30-03-2021 15:00:00", "Physiotherapy");
         physician3.setTimeTable("30-03-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("31-03-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("31-03-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("31-03-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("31-03-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("31-03-2021 17:00:00", "Physiotherapy");
         physician3.setPhysicianId();
         Physician.setPhysicians(physician3);
     }
@@ -134,9 +135,26 @@ public class PhysicianTest {
      */
     @Test
     public void testGetConsultationHours() {
-        ArrayList<String> expResult = new ArrayList<>();
-        expResult.add("Tue 16-03-2021 19:00:00");
-        ArrayList<String> result = physician3.getConsultationHours();
+        LinkedHashMap<String,String> expResult = new LinkedHashMap<>();
+        expResult.put("Tue 09-03-2021 19:00:00","Available");
+        expResult.put("Tue 09-03-2021 19:30:00","Available");
+        expResult.put("Tue 09-03-2021 20:00:00","Available");
+        expResult.put("Tue 09-03-2021 20:30:00","Available");
+        expResult.put("Tue 16-03-2021 19:00:00","Available");
+        expResult.put("Tue 16-03-2021 19:30:00","Available");
+        expResult.put("Tue 16-03-2021 20:00:00","Available");
+        expResult.put("Tue 16-03-2021 20:30:00","Available");
+        expResult.put("Tue 23-03-2021 19:00:00","Available");
+        expResult.put("Tue 23-03-2021 19:30:00","Available");
+        expResult.put("Tue 23-03-2021 20:00:00","Available");
+        expResult.put("Tue 23-03-2021 20:30:00","Available");
+        expResult.put("Tue 30-03-2021 19:00:00","Available");
+        expResult.put("Tue 30-03-2021 19:30:00","Available");
+        expResult.put("Tue 30-03-2021 20:00:00","Available");
+        expResult.put("Tue 30-03-2021 20:30:00","Available");
+        
+        
+        LinkedHashMap<String,String> result = physician3.getConsultationHours();
         assertEquals(expResult, result);
     }
 

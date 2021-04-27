@@ -5,6 +5,7 @@
  */
 package physiotherapy.sports.injury.centre.psic;
 
+import Views.VisitorView;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -111,5 +112,14 @@ public class Treatment {
      */
     public void setDateTimeOfTreatment(String dateTimeOfTreatment) {
         this.dateTimeOfTreatment = dateTimeOfTreatment;
+    }
+
+    public static String findTreatmentsByPatient(String s,String visitor) {
+        for (Treatment treatment : Treatment.getTreatments()) {
+            if (treatment.getPatientName().equals(visitor)) {
+                s += treatment.getTreatmentName() + "\t" + treatment.getPhysicianName() + "\t" + treatment.getDateTimeOfTreatment() + "\t" + treatment.getPatientName() + "\t" + treatment.getStatus() + "\n";
+            }
+        }
+        return s;
     }
 }

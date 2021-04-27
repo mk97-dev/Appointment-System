@@ -453,7 +453,7 @@ public class VisitorView extends javax.swing.JFrame {
                         .addComponent(btnChangeAppointment))
                     .addGroup(jPanelChangeAppointmentLayout.createSequentialGroup()
                         .addComponent(lblChangeAppointment)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(comboBoxChangeAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(48, 48, 48))
         );
@@ -478,23 +478,24 @@ public class VisitorView extends javax.swing.JFrame {
                 .addComponent(btnBackBook1)
                 .addGap(191, 191, 191)
                 .addComponent(jLabel5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(248, Short.MAX_VALUE))
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelChangeAppointment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblSelectAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCancelBooking))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblSelectAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnCancelBooking))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(comboBoxAppointments, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(42, 42, 42))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(btnEditBooking, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                        .addComponent(comboBoxAppointments, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(42, 42, 42))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(btnEditBooking, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelChangeAppointment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -723,12 +724,7 @@ public class VisitorView extends javax.swing.JFrame {
         // TODO add your handling code here:
         jTabbedPane1.setSelectedIndex(3);
         String s = "Treatment\tPhysician\tTime\t\tPatient\tStatus\n";
-        for (Treatment treatment : Treatment.getTreatments()) {
-            if (treatment.getPatientName().equals(visitor)) {
-                s += treatment.getTreatmentName() + "\t" + treatment.getPhysicianName() + "\t" + treatment.getDateTimeOfTreatment() + "\t" + treatment.getPatientName() + "\t" + treatment.getStatus() + "\n";
-
-            }
-        }
+        s = Treatment.findTreatmentsByPatient(s, visitor);
         if(s.equals("Treatment\tPhysician\tTime\t\tPatient\tStatus\n")){
             txtAreaBookings.setText("No Bookings for this Patient");
         }
@@ -736,6 +732,7 @@ public class VisitorView extends javax.swing.JFrame {
             txtAreaBookings.setText(s);
         }
     }//GEN-LAST:event_jButton4ActionPerformed
+
 
     private void btnBackPatientviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackPatientviewActionPerformed
         // TODO add your handling code here:
