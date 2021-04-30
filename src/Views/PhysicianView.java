@@ -32,6 +32,7 @@ public class PhysicianView extends javax.swing.JFrame {
         lblTemp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Physiotherapy Sports Injury Centre (PMIC) -> Physician Menu");
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {

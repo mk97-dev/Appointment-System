@@ -45,11 +45,13 @@ public class PatientView extends javax.swing.JFrame {
         txtPatientId = new javax.swing.JTextField();
         btnLogin = new javax.swing.JButton();
         btnBackPatientLogin = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnAppointmentByExpertise = new javax.swing.JButton();
         btnAppointmentByPhysician = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         btnBackPatientview = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         comboBoxPhysicians = new javax.swing.JComboBox<>();
 
@@ -70,6 +72,7 @@ public class PatientView extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         txtAreaBookings = new javax.swing.JTextArea();
         btnChangeBooking = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         comboBoxAppointments = new javax.swing.JComboBox<>();
 
@@ -102,6 +105,7 @@ public class PatientView extends javax.swing.JFrame {
         jLabel4.setText("jLabel4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Physiotherapy Sports Injury Centre (PMIC) -> Patient Menu");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Patient ID");
@@ -120,6 +124,9 @@ public class PatientView extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel8.setText("Patient Login");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -128,7 +135,9 @@ public class PatientView extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnBackPatientLogin))
+                        .addComponent(btnBackPatientLogin)
+                        .addGap(181, 181, 181)
+                        .addComponent(jLabel8))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(182, 182, 182)
                         .addComponent(jLabel1)
@@ -143,7 +152,9 @@ public class PatientView extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnBackPatientLogin)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnBackPatientLogin)
+                    .addComponent(jLabel8))
                 .addGap(57, 57, 57)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
@@ -154,6 +165,8 @@ public class PatientView extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("tab1", jPanel1);
+
+        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
 
         btnAppointmentByExpertise.setText("Book Appointment by Expertise");
         btnAppointmentByExpertise.addActionListener(new java.awt.event.ActionListener() {
@@ -183,6 +196,9 @@ public class PatientView extends javax.swing.JFrame {
             }
         });
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel9.setText("Patient Menu");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -191,7 +207,9 @@ public class PatientView extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnBackPatientview))
+                        .addComponent(btnBackPatientview)
+                        .addGap(162, 162, 162)
+                        .addComponent(jLabel9))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(184, 184, 184)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -204,18 +222,21 @@ public class PatientView extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnBackPatientview)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnBackPatientview)
+                    .addComponent(jLabel9))
                 .addGap(68, 68, 68)
                 .addComponent(btnAppointmentByPhysician)
                 .addGap(18, 18, 18)
                 .addComponent(btnAppointmentByExpertise)
                 .addGap(18, 18, 18)
                 .addComponent(jButton4)
-                .addContainerGap(173, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab1", jPanel2);
 
+        jPanel3.setBackground(new java.awt.Color(204, 255, 204));
         comboBoxTreatments.setVisible(false); lblTreatment.setVisible(false); btnSelectTreatment.setVisible(false); comboBoxDate.setVisible(false); lblDate.setVisible(false); btnBook.setVisible(false);
 
         comboBoxPhysicians.addItemListener(new java.awt.event.ItemListener() {
@@ -234,6 +255,7 @@ public class PatientView extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Book Appointment");
 
         jLabel3.setText("Select Physician");
@@ -291,52 +313,53 @@ public class PatientView extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(btnBackBook)
-                .addGap(261, 261, 261)
-                .addComponent(jLabel2))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
-                .addComponent(comboBoxPhysicians, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(470, 470, 470)
-                .addComponent(btnSelectedPhysician, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(lblTreatment)
-                .addGap(5, 5, 5)
-                .addComponent(comboBoxTreatments, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(470, 470, 470)
-                .addComponent(btnSelectTreatment, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(lblDate)
-                .addGap(5, 5, 5)
-                .addComponent(comboBoxDate, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(472, 472, 472)
-                .addComponent(btnSelectDate, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(lblRooms)
-                .addGap(32, 32, 32)
-                .addComponent(comboBoxRooms, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(473, 473, 473)
-                .addComponent(btnBook, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(btnBackBook)
+                        .addGap(166, 166, 166)
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)
+                        .addComponent(comboBoxPhysicians, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(470, 470, 470)
+                        .addComponent(btnSelectedPhysician, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(lblTreatment)
+                        .addGap(5, 5, 5)
+                        .addComponent(comboBoxTreatments, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(470, 470, 470)
+                        .addComponent(btnSelectTreatment, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(lblDate)
+                        .addGap(5, 5, 5)
+                        .addComponent(comboBoxDate, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(472, 472, 472)
+                        .addComponent(btnSelectDate, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(lblRooms)
+                        .addGap(32, 32, 32)
+                        .addComponent(comboBoxRooms, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(473, 473, 473)
+                        .addComponent(btnBook, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(42, 42, 42))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(13, 13, 13)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBackBook)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(jLabel2)))
+                    .addComponent(jLabel2))
                 .addGap(13, 13, 13)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -369,6 +392,7 @@ public class PatientView extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("tab1", jPanel3);
 
+        jPanel4.setBackground(new java.awt.Color(204, 255, 204));
         comboBoxTreatments.setVisible(false); lblTreatment.setVisible(false); btnSelectTreatment.setVisible(false); comboBoxDate.setVisible(false); lblDate.setVisible(false); btnBook.setVisible(false);
 
         txtAreaBookings.setColumns(20);
@@ -383,21 +407,33 @@ public class PatientView extends javax.swing.JFrame {
             }
         });
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel10.setText("View Booking");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(452, 452, 452)
-                .addComponent(btnChangeBooking))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnChangeBooking))
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addGap(12, 12, 12)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(215, 215, 215)
+                        .addComponent(jLabel10)))
+                .addGap(74, 74, 74))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addContainerGap()
+                .addComponent(jLabel10)
+                .addGap(5, 5, 5)
                 .addComponent(btnChangeBooking)
                 .addGap(7, 7, 7)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -405,6 +441,7 @@ public class PatientView extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("tab1", jPanel4);
 
+        jPanel5.setBackground(new java.awt.Color(204, 255, 204));
         comboBoxTreatments.setVisible(false); lblTreatment.setVisible(false); btnSelectTreatment.setVisible(false); comboBoxDate.setVisible(false); lblDate.setVisible(false); btnBook.setVisible(false);
 
         comboBoxAppointments.addItemListener(new java.awt.event.ItemListener() {
@@ -423,6 +460,7 @@ public class PatientView extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setText("EDIT APPOINTMENT");
 
         lblSelectAppointment.setText("Select Appointment");
@@ -447,6 +485,8 @@ public class PatientView extends javax.swing.JFrame {
                 btnEditBookingActionPerformed(evt);
             }
         });
+
+        jPanelChangeAppointment.setBackground(new java.awt.Color(204, 255, 204));
 
         lblChangeAppointment.setText("Select Date");
 
@@ -481,7 +521,7 @@ public class PatientView extends javax.swing.JFrame {
                     .addComponent(comboBoxChangeAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnChangeAppointment)
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -491,7 +531,7 @@ public class PatientView extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnBackBook1)
-                .addGap(191, 191, 191)
+                .addGap(159, 159, 159)
                 .addComponent(jLabel5)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel5Layout.createSequentialGroup()
@@ -515,7 +555,7 @@ public class PatientView extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBackBook1)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -533,8 +573,10 @@ public class PatientView extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("tab1", jPanel5);
 
+        jPanel6.setBackground(new java.awt.Color(204, 255, 204));
         comboBoxTreatments.setVisible(false); lblTreatment.setVisible(false); btnSelectTreatment.setVisible(false); comboBoxDate.setVisible(false); lblDate.setVisible(false); btnBook.setVisible(false);
 
+        comboBoxTreatments1.setBackground(new java.awt.Color(204, 255, 204));
         comboBoxTreatments1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rehabilitation", "Physiotherapy", "Osteopathy" }));
         comboBoxTreatments1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -552,6 +594,7 @@ public class PatientView extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("Book Appointment");
 
         jLabel7.setText("Select Treatment");
@@ -767,7 +810,7 @@ public class PatientView extends javax.swing.JFrame {
                 if (physician.getFullName().equals(comboBoxPhysicians.getSelectedItem())) {
                     for (Map.Entry<Slots, String> entry : physician.getTimeTable().entrySet()) {
                         if (entry.getValue().equals("Available") && entry.getKey().getTreatment().equals(comboBoxTreatments.getSelectedItem()) && entry.getKey().getSlotDateTime().equals(comboBoxDate.getSelectedItem())) {
-
+                               
                             entry.setValue("Booked");
                             Component frame = null;
                             JOptionPane.showMessageDialog(frame,
@@ -806,14 +849,19 @@ public class PatientView extends javax.swing.JFrame {
         for (Physician physician : Physician.getPhysicians()) {
             if (physician.getFullName().equals(comboBoxPhysicians.getSelectedItem())) {
                 for (Map.Entry<Slots, String> entry : physician.getTimeTable().entrySet()) {
-                    if (entry.getValue().equals("Available") && entry.getKey().getTreatment().equals(comboBoxTreatments.getSelectedItem())) {
                         comboBoxDate.addItem(entry.getKey().getSlotDateTime());
-                    }
-
+                    
+                     for (Treatment treatment : Treatment.getTreatments()) {
+                if ((treatment.getPhysicianName().equals(physician.getFullName())) && (treatment.getDateTimeOfTreatment().equals(entry.getKey().getSlotDateTime())) && (treatment.getStatus().equals("Booked") || treatment.getStatus().equals("Changed"))) {
+                    comboBoxDate.removeItem(entry.getKey().getSlotDateTime());
                 }
-
+            }
+                    
+                }
+                   
             }
         }
+        
 
     }//GEN-LAST:event_btnSelectTreatmentActionPerformed
 
@@ -864,7 +912,7 @@ public class PatientView extends javax.swing.JFrame {
         for (Room room : Room.getRooms()) {
             comboBoxRooms.addItem(room.getRoomName());
             for (Treatment treatment : Treatment.getTreatments()) {
-                if ((treatment.getRoom().equals(room.getRoomName())) && (treatment.getDateTimeOfTreatment().equals(comboBoxDate.getSelectedItem())) && treatment.getStatus().equals("Booked")) {
+                if ((treatment.getRoom().equals(room.getRoomName())) && (treatment.getDateTimeOfTreatment().equals(comboBoxDate.getSelectedItem())) && (treatment.getStatus().equals("Booked")||treatment.getStatus().equals("Changed"))) {
                     comboBoxRooms.removeItem(room.getRoomName());
                 }
             }
@@ -949,9 +997,13 @@ public class PatientView extends javax.swing.JFrame {
         for (Physician physician : Physician.getPhysicians()) {
             if (physician.getFullName().equals(comboBoxPhysicians1.getSelectedItem())) {
                 for (Map.Entry<Slots, String> entry : physician.getTimeTable().entrySet()) {
-                    if (entry.getValue().equals("Available") && entry.getKey().getTreatment().equals(comboBoxTreatments1.getSelectedItem())) {
                         comboBoxDate1.addItem(entry.getKey().getSlotDateTime());
-                    }
+                    
+                     for (Treatment treatment : Treatment.getTreatments()) {
+                if ((treatment.getPhysicianName().equals(physician.getFullName())) && (treatment.getDateTimeOfTreatment().equals(entry.getKey().getSlotDateTime())) && (treatment.getStatus().equals("Booked") || treatment.getStatus().equals("Changed"))) {
+                    comboBoxDate1.removeItem(entry.getKey().getSlotDateTime());
+                }
+            }
 
                 }
 
@@ -1143,12 +1195,15 @@ public class PatientView extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> comboBoxTreatments1;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

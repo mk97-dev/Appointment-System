@@ -23,7 +23,7 @@ public class Treatment {
     private String physicianName;
     private String patientName;
     private static int count = 0;
-    private String appointmentId = "Appointment ";
+    private String appointmentId = "Appointment";
     private String status;
     private static ArrayList<Treatment> treatments = new ArrayList<Treatment>();
 

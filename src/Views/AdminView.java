@@ -5,6 +5,7 @@
  */
 package Views;
 
+import com.sun.glass.events.KeyEvent;
 import java.awt.Component;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -40,6 +41,7 @@ public class AdminView extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         btnReport = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
         panelAddPhysician = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -70,6 +72,7 @@ public class AdminView extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
         panelViewReport = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtAreaBookings = new javax.swing.JTextArea();
@@ -82,7 +85,13 @@ public class AdminView extends javax.swing.JFrame {
         btnShowPatientReport = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Physiotherapy Sports Injury Centre (PMIC) -> Admin Menu");
+        setBackground(new java.awt.Color(52, 152, 219));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTabbedPane1.setBackground(new java.awt.Color(204, 255, 204));
+
+        panelAdmin.setBackground(new java.awt.Color(204, 255, 204));
 
         jButton1.setText("Add Physician");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -112,34 +121,46 @@ public class AdminView extends javax.swing.JFrame {
             }
         });
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel10.setText("Physiotherapy Sports Injury Centre (PMIC)");
+
         javax.swing.GroupLayout panelAdminLayout = new javax.swing.GroupLayout(panelAdmin);
         panelAdmin.setLayout(panelAdminLayout);
         panelAdminLayout.setHorizontalGroup(
             panelAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAdminLayout.createSequentialGroup()
-                .addGap(187, 187, 187)
-                .addGroup(panelAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnReport, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addGroup(panelAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelAdminLayout.createSequentialGroup()
+                        .addGap(305, 305, 305)
+                        .addGroup(panelAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnReport, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelAdminLayout.createSequentialGroup()
+                        .addGap(188, 188, 188)
+                        .addComponent(jLabel10)))
+                .addContainerGap(197, Short.MAX_VALUE))
         );
         panelAdminLayout.setVerticalGroup(
             panelAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAdminLayout.createSequentialGroup()
-                .addGap(94, 94, 94)
+                .addGap(31, 31, 31)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
                 .addGap(18, 18, 18)
                 .addComponent(btnReport)
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addComponent(jButton5)
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addGap(107, 107, 107))
         );
 
         jTabbedPane1.addTab("tab1", panelAdmin);
+
+        panelAddPhysician.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel1.setText("Full Name");
 
@@ -188,26 +209,30 @@ public class AdminView extends javax.swing.JFrame {
             .addGroup(panelAddPhysicianLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(panelAddPhysicianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3)
-                    .addComponent(jButton3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelAddPhysicianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAddPhysician, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
-                    .addComponent(txtAddress)
-                    .addComponent(txtPhone, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtConsultation, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtFullName))
-                .addGap(18, 18, 18)
-                .addGroup(panelAddPhysicianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelAddPhysicianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelExpertise)
-                    .addComponent(panelDaysWorking))
+                    .addGroup(panelAddPhysicianLayout.createSequentialGroup()
+                        .addGroup(panelAddPhysicianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelAddPhysicianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE)
+                            .addComponent(txtPhone, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtConsultation, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtFullName))
+                        .addGap(18, 18, 18)
+                        .addGroup(panelAddPhysicianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(panelAddPhysicianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(panelExpertise)
+                            .addComponent(panelDaysWorking)))
+                    .addGroup(panelAddPhysicianLayout.createSequentialGroup()
+                        .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAddPhysician, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(67, 67, 67))
         );
         panelAddPhysicianLayout.setVerticalGroup(
@@ -248,11 +273,19 @@ public class AdminView extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("tab2", panelAddPhysician);
 
+        panelAddPatient.setBackground(new java.awt.Color(204, 255, 204));
+
         jLabel7.setText("Full Name");
 
         jLabel8.setText("Address");
 
         jLabel9.setText("Phone No.");
+
+        txtPhonePatient.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtPhonePatientKeyPressed(evt);
+            }
+        });
 
         btnAddPatient.setText("Add Patient");
         btnAddPatient.addActionListener(new java.awt.event.ActionListener() {
@@ -286,7 +319,7 @@ public class AdminView extends javax.swing.JFrame {
                             .addComponent(jLabel9))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelAddPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtAddressPatient, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE)
+                            .addComponent(txtAddressPatient, javax.swing.GroupLayout.DEFAULT_SIZE, 451, Short.MAX_VALUE)
                             .addComponent(txtPhonePatient, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtFullNamePatient))))
                 .addGap(218, 218, 218))
@@ -315,6 +348,8 @@ public class AdminView extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("tab1", panelAddPatient);
 
+        panelSelectReport.setBackground(new java.awt.Color(204, 255, 204));
+
         jButton6.setText("Show All Report");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -336,31 +371,43 @@ public class AdminView extends javax.swing.JFrame {
             }
         });
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel11.setText("Report Menu");
+
         javax.swing.GroupLayout panelSelectReportLayout = new javax.swing.GroupLayout(panelSelectReport);
         panelSelectReport.setLayout(panelSelectReportLayout);
         panelSelectReportLayout.setHorizontalGroup(
             panelSelectReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelSelectReportLayout.createSequentialGroup()
-                .addContainerGap(253, Short.MAX_VALUE)
-                .addGroup(panelSelectReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(221, 221, 221))
+            .addGroup(panelSelectReportLayout.createSequentialGroup()
+                .addGroup(panelSelectReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelSelectReportLayout.createSequentialGroup()
+                        .addGap(285, 285, 285)
+                        .addGroup(panelSelectReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(panelSelectReportLayout.createSequentialGroup()
+                        .addGap(301, 301, 301)
+                        .addComponent(jLabel11)))
+                .addContainerGap(341, Short.MAX_VALUE))
         );
         panelSelectReportLayout.setVerticalGroup(
             panelSelectReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelSelectReportLayout.createSequentialGroup()
-                .addGap(94, 94, 94)
+                .addGap(37, 37, 37)
+                .addComponent(jLabel11)
+                .addGap(39, 39, 39)
                 .addComponent(jButton6)
                 .addGap(18, 18, 18)
                 .addComponent(jButton7)
                 .addGap(18, 18, 18)
                 .addComponent(jButton8)
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(161, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab1", panelSelectReport);
+
+        panelViewReport.setBackground(new java.awt.Color(204, 255, 204));
 
         txtAreaBookings.setColumns(20);
         txtAreaBookings.setRows(5);
@@ -381,7 +428,7 @@ public class AdminView extends javax.swing.JFrame {
             .addGroup(panelViewReportLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelViewReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 751, Short.MAX_VALUE)
                     .addGroup(panelViewReportLayout.createSequentialGroup()
                         .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -398,6 +445,8 @@ public class AdminView extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("tab1", panelViewReport);
+
+        panelViewReportByPatient.setBackground(new java.awt.Color(204, 255, 204));
 
         txtAreaPatientReport.setColumns(20);
         txtAreaPatientReport.setRows(5);
@@ -425,7 +474,7 @@ public class AdminView extends javax.swing.JFrame {
             .addGroup(panelViewReportByPatientLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelViewReportByPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 751, Short.MAX_VALUE)
                     .addGroup(panelViewReportByPatientLayout.createSequentialGroup()
                         .addComponent(btnBack1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(153, 153, 153)
@@ -449,7 +498,7 @@ public class AdminView extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("tab1", panelViewReportByPatient);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -33, -1, 400));
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -33, 780, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -567,13 +616,13 @@ public class AdminView extends javax.swing.JFrame {
         // TODO add your handling code here:
         jTabbedPane1.setSelectedIndex(4);
         jTabbedPane1.repaint();
-        String s = "Treatment\tPhysician\tTime\t\tPatient\tStatus\n";
+        String s = "Treatment\tPhysician\tTime\t\tPatient\tRoom\tStatus\n";
         for (Treatment treatment : Treatment.getTreatments()) {
 
-            s += treatment.getTreatmentName() + "\t" + treatment.getPhysicianName() + "\t" + treatment.getDateTimeOfTreatment() + "\t" + treatment.getPatientName() + "\t" + treatment.getStatus() + "\n";
+            s += treatment.getTreatmentName() + "\t" + treatment.getPhysicianName() + "\t" + treatment.getDateTimeOfTreatment() + "\t" + treatment.getPatientName()+"\t"+treatment.getRoom() + "\t" + treatment.getStatus() + "\n";
 
         }
-        if (s.equals("Treatment\tPhysician\tTime\t\tPatient\tStatus\n")) {
+        if (s.equals("Treatment\tPhysician\tTime\t\tPatient\tRoom\tStatus\n")) {
             txtAreaBookings.setText("No Bookings to show");
         } else {
             txtAreaBookings.setText(s);
@@ -593,26 +642,39 @@ public class AdminView extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+        jTabbedPane1.setSelectedIndex(0);
+        jTabbedPane1.repaint();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void btnShowPatientReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowPatientReportActionPerformed
         // TODO add your handling code here:
         String patientName = String.valueOf(comboBoxPatientReport.getSelectedItem());
         // Patient patient = Patient.getPatient(patientName);
-        String s = "Treatment\tPhysician\tTime\t\tPatient\tStatus\n";
+        String s = "Treatment\tPhysician\tTime\t\tPatient\tRoom\tStatus\n";
         for (Treatment treatment : Treatment.getTreatments()) {
             if (treatment.getPatientName().equals(patientName)) {
-                s += treatment.getTreatmentName() + "\t" + treatment.getPhysicianName() + "\t" + treatment.getDateTimeOfTreatment() + "\t" + treatment.getPatientName() + "\t" + treatment.getStatus() + "\n";
+                s += treatment.getTreatmentName() + "\t" + treatment.getPhysicianName() + "\t" + treatment.getDateTimeOfTreatment() + "\t" + treatment.getRoom() + "\t" + treatment.getStatus() + "\n";
 
             }
         }
-        if (s.equals("Treatment\tPhysician\tTime\t\tPatient\tStatus\n")) {
+        if (s.equals("Treatment\tPhysician\tTime\t\tPatient\tRoom\tStatus\n")) {
             txtAreaPatientReport.setText("No Bookings for this Patient");
         } else {
             txtAreaPatientReport.setText(s);
         }
 
     }//GEN-LAST:event_btnShowPatientReportActionPerformed
+
+    private void txtPhonePatientKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPhonePatientKeyPressed
+        // TODO add your handling code here:
+        int key = evt.getKeyCode();
+        if((key>= evt.VK_0 && key<=evt.VK_9) || (key>=evt.VK_NUMPAD0 && key<=evt.VK_NUMPAD9) || key == KeyEvent.VK_BACKSPACE || key == KeyEvent.VK_PLUS ){
+            txtPhonePatient.setEditable(true);
+        }
+        else{
+            txtPhonePatient.setEditable(false);
+        }
+    }//GEN-LAST:event_txtPhonePatientKeyPressed
 
     /**
      * @param args the command line arguments
@@ -666,6 +728,8 @@ public class AdminView extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

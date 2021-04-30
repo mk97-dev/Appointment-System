@@ -33,29 +33,19 @@ public class Mainmenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        btnAdminMenu = new javax.swing.JButton();
-        btnPhysicianMenu = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         btnPatientMenu = new javax.swing.JButton();
         btnVisitorMenu = new javax.swing.JButton();
+        btnPhysicianMenu = new javax.swing.JButton();
+        btnAdminMenu = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Physiotherapy Sports Injury Centre (PMIC)");
+        setBackground(new java.awt.Color(204, 255, 204));
+        setSize(new java.awt.Dimension(590, 420));
 
-        jLabel1.setText("Main Menu");
-
-        btnAdminMenu.setText("Admin Login");
-        btnAdminMenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdminMenuActionPerformed(evt);
-            }
-        });
-
-        btnPhysicianMenu.setText("Physician Login");
-        btnPhysicianMenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPhysicianMenuActionPerformed(evt);
-            }
-        });
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
         btnPatientMenu.setText("Patient Login");
         btnPatientMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -71,34 +61,66 @@ public class Mainmenu extends javax.swing.JFrame {
             }
         });
 
+        btnPhysicianMenu.setText("Physician Login");
+        btnPhysicianMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPhysicianMenuActionPerformed(evt);
+            }
+        });
+
+        btnAdminMenu.setText("Admin Login");
+        btnAdminMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdminMenuActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Main Menu");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(222, 222, 222)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(186, 186, 186)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnPhysicianMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAdminMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnPatientMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnVisitorMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(235, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(btnAdminMenu)
+                .addGap(18, 18, 18)
+                .addComponent(btnPhysicianMenu)
+                .addGap(18, 18, 18)
+                .addComponent(btnPatientMenu)
+                .addGap(18, 18, 18)
+                .addComponent(btnVisitorMenu)
+                .addContainerGap(172, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(149, 149, 149)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(btnPhysicianMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1)
-                    .addComponent(btnAdminMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnPatientMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnVisitorMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(132, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(31, 31, 31)
-                .addComponent(btnAdminMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnPhysicianMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnPatientMenu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnVisitorMenu)
-                .addContainerGap(102, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -157,7 +179,7 @@ public class Mainmenu extends javax.swing.JFrame {
 
         addRooms();                  //Add hardcoded rooms
 
-        //bookTreatment(physicians, rooms, patients, appointments);   //Add hardcoded bookings
+        addAppointments();   //Add hardcoded bookings
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -201,198 +223,267 @@ public class Mainmenu extends javax.swing.JFrame {
     //Method to add hard coded physycians
     private static ArrayList<Physician> addPhysicians() {
         ArrayList<Physician> physicians = new ArrayList<Physician>();
-        String[] rehabilitationTreatments = {"Gym rehabilitation", "Pool rehabilitation"};
-        String[] physiotherapyTreatments = {"Mobilisation of the spine and joints", "Neural Mobilisation"};
-        String[] osteopathyTreatments = {"massage", "acupunture"};
+        
 
         Physician physician1 = new Physician();
-        physician1.setFullName("Mubeen");
-        physician1.setAddress("49 Gleaning Avenue");
-        physician1.setPhoneNumber(12345);
-        physician1.setConsultationHours("05-03-2021 19:00:00");
+        physician1.setFullName("Dr. Mubeen");
+        physician1.setAddress("Dewsbury, UK");
+        physician1.setPhoneNumber(55662233);
+        physician1.setConsultationHours("05-04-2021 19:00:00");
         physician1.addExpertise("Rehabilitation");
         physician1.addExpertise("Osteopathy");
-        physician1.setTimeTable("05-03-2021 09:00:00", "Rehabilitation");
-        physician1.setTimeTable("05-03-2021 11:00:00", "Rehabilitation");
-        physician1.setTimeTable("05-03-2021 13:00:00", "Rehabilitation");
-        physician1.setTimeTable("05-03-2021 15:00:00", "Osteopathy");
-        physician1.setTimeTable("05-03-2021 17:00:00", "Osteopathy");
-        physician1.setTimeTable("06-03-2021 09:00:00", "Rehabilitation");
-        physician1.setTimeTable("06-03-2021 11:00:00", "Rehabilitation");
-        physician1.setTimeTable("06-03-2021 13:00:00", "Rehabilitation");
-        physician1.setTimeTable("06-03-2021 15:00:00", "Osteopathy");
-        physician1.setTimeTable("06-03-2021 17:00:00", "Osteopathy");
-        physician1.setTimeTable("12-03-2021 09:00:00", "Rehabilitation");
-        physician1.setTimeTable("12-03-2021 11:00:00", "Rehabilitation");
-        physician1.setTimeTable("12-03-2021 13:00:00", "Osteopathy");
-        physician1.setTimeTable("12-03-2021 15:00:00", "Osteopathy");
-        physician1.setTimeTable("12-03-2021 17:00:00", "Osteopathy");
-        physician1.setTimeTable("13-03-2021 09:00:00", "Osteopathy");
-        physician1.setTimeTable("13-03-2021 11:00:00", "Osteopathy");
-        physician1.setTimeTable("13-03-2021 13:00:00", "Rehabilitation");
-        physician1.setTimeTable("13-03-2021 15:00:00", "Rehabilitation");
-        physician1.setTimeTable("13-03-2021 17:00:00", "Rehabilitation");
-        physician1.setTimeTable("19-03-2021 09:00:00", "Rehabilitation");
-        physician1.setTimeTable("19-03-2021 11:00:00", "Rehabilitation");
-        physician1.setTimeTable("19-03-2021 13:00:00", "Osteopathy");
-        physician1.setTimeTable("19-03-2021 15:00:00", "Osteopathy");
-        physician1.setTimeTable("19-03-2021 17:00:00", "Osteopathy");
-        physician1.setTimeTable("20-03-2021 09:00:00", "Rehabilitation");
-        physician1.setTimeTable("20-03-2021 11:00:00", "Rehabilitation");
-        physician1.setTimeTable("20-03-2021 13:00:00", "Osteopathy");
-        physician1.setTimeTable("20-03-2021 15:00:00", "Osteopathy");
-        physician1.setTimeTable("20-03-2021 17:00:00", "Osteopathy");
-        physician1.setTimeTable("26-03-2021 09:00:00", "Osteopathy");
-        physician1.setTimeTable("26-03-2021 11:00:00", "Osteopathy");
-        physician1.setTimeTable("26-03-2021 13:00:00", "Osteopathy");
-        physician1.setTimeTable("26-03-2021 15:00:00", "Rehabilitation");
-        physician1.setTimeTable("26-03-2021 17:00:00", "Rehabilitation");
-        physician1.setTimeTable("27-03-2021 09:00:00", "Osteopathy");
-        physician1.setTimeTable("27-03-2021 11:00:00", "Osteopathy");
-        physician1.setTimeTable("27-03-2021 13:00:00", "Osteopathy");
-        physician1.setTimeTable("27-03-2021 15:00:00", "Osteopathy");
-        physician1.setTimeTable("27-03-2021 17:00:00", "Osteopathy");
+        physician1.setTimeTable("05-04-2021 09:00:00", "Rehabilitation");
+        physician1.setTimeTable("05-04-2021 11:00:00", "Rehabilitation");
+        physician1.setTimeTable("05-04-2021 13:00:00", "Rehabilitation");
+        physician1.setTimeTable("05-04-2021 15:00:00", "Osteopathy");
+        physician1.setTimeTable("05-04-2021 17:00:00", "Osteopathy");
+        physician1.setTimeTable("06-04-2021 09:00:00", "Rehabilitation");
+        physician1.setTimeTable("06-04-2021 11:00:00", "Rehabilitation");
+        physician1.setTimeTable("06-04-2021 13:00:00", "Rehabilitation");
+        physician1.setTimeTable("06-04-2021 15:00:00", "Osteopathy");
+        physician1.setTimeTable("06-04-2021 17:00:00", "Osteopathy");
+        physician1.setTimeTable("12-04-2021 09:00:00", "Rehabilitation");
+        physician1.setTimeTable("12-04-2021 11:00:00", "Rehabilitation");
+        physician1.setTimeTable("12-04-2021 13:00:00", "Osteopathy");
+        physician1.setTimeTable("12-04-2021 15:00:00", "Osteopathy");
+        physician1.setTimeTable("12-04-2021 17:00:00", "Osteopathy");
+        physician1.setTimeTable("13-04-2021 09:00:00", "Osteopathy");
+        physician1.setTimeTable("13-04-2021 11:00:00", "Osteopathy");
+        physician1.setTimeTable("13-04-2021 13:00:00", "Rehabilitation");
+        physician1.setTimeTable("13-04-2021 15:00:00", "Rehabilitation");
+        physician1.setTimeTable("13-04-2021 17:00:00", "Rehabilitation");
+        physician1.setTimeTable("19-04-2021 09:00:00", "Rehabilitation");
+        physician1.setTimeTable("19-04-2021 11:00:00", "Rehabilitation");
+        physician1.setTimeTable("19-04-2021 13:00:00", "Osteopathy");
+        physician1.setTimeTable("19-04-2021 15:00:00", "Osteopathy");
+        physician1.setTimeTable("19-04-2021 17:00:00", "Osteopathy");
+        physician1.setTimeTable("20-04-2021 09:00:00", "Rehabilitation");
+        physician1.setTimeTable("20-04-2021 11:00:00", "Rehabilitation");
+        physician1.setTimeTable("20-04-2021 13:00:00", "Osteopathy");
+        physician1.setTimeTable("20-04-2021 15:00:00", "Osteopathy");
+        physician1.setTimeTable("20-04-2021 17:00:00", "Osteopathy");
+        physician1.setTimeTable("26-04-2021 09:00:00", "Osteopathy");
+        physician1.setTimeTable("26-04-2021 11:00:00", "Osteopathy");
+        physician1.setTimeTable("26-04-2021 13:00:00", "Osteopathy");
+        physician1.setTimeTable("26-04-2021 15:00:00", "Rehabilitation");
+        physician1.setTimeTable("26-04-2021 17:00:00", "Rehabilitation");
+        physician1.setTimeTable("27-04-2021 09:00:00", "Osteopathy");
+        physician1.setTimeTable("27-04-2021 11:00:00", "Osteopathy");
+        physician1.setTimeTable("27-04-2021 13:00:00", "Osteopathy");
+        physician1.setTimeTable("27-04-2021 15:00:00", "Osteopathy");
+        physician1.setTimeTable("27-04-2021 17:00:00", "Osteopathy");
         physician1.setPhysicianId();
         Physician.setPhysicians(physician1);
 
         Physician physician2 = new Physician();
-        physician2.setFullName("ALI");
-        physician2.setAddress("53 Gleaning Avenue");
-        physician2.setPhoneNumber(12345);
-        physician2.setConsultationHours("07-03-2021 07:00:00");
+        physician2.setFullName("Dr. ALI");
+        physician2.setAddress("Bradford, UK");
+        physician2.setPhoneNumber(32435466);
+        physician2.setConsultationHours("07-04-2021 07:00:00");
         physician2.addExpertise("Rehabilitation");
         physician2.addExpertise("Osteopathy");
-        physician2.setTimeTable("06-03-2021 09:00:00", "Rehabilitation");
-        physician2.setTimeTable("06-03-2021 11:00:00", "Rehabilitation");
-        physician2.setTimeTable("06-03-2021 13:00:00", "Rehabilitation");
-        physician2.setTimeTable("06-03-2021 15:00:00", "Osteopathy");
-        physician2.setTimeTable("06-03-2021 17:00:00", "Osteopathy");
-        physician2.setTimeTable("07-03-2021 09:00:00", "Rehabilitation");
-        physician2.setTimeTable("07-03-2021 11:00:00", "Rehabilitation");
-        physician2.setTimeTable("07-03-2021 13:00:00", "Rehabilitation");
-        physician2.setTimeTable("07-03-2021 15:00:00", "Osteopathy");
-        physician2.setTimeTable("07-03-2021 17:00:00", "Osteopathy");
-        physician2.setTimeTable("08-03-2021 09:00:00", "Rehabilitation");
-        physician2.setTimeTable("08-03-2021 11:00:00", "Rehabilitation");
-        physician2.setTimeTable("08-03-2021 13:00:00", "Osteopathy");
-        physician2.setTimeTable("08-03-2021 15:00:00", "Osteopathy");
-        physician2.setTimeTable("08-03-2021 17:00:00", "Osteopathy");
-        physician2.setTimeTable("13-03-2021 09:00:00", "Osteopathy");
-        physician2.setTimeTable("13-03-2021 11:00:00", "Osteopathy");
-        physician2.setTimeTable("13-03-2021 13:00:00", "Rehabilitation");
-        physician2.setTimeTable("13-03-2021 15:00:00", "Rehabilitation");
-        physician2.setTimeTable("13-03-2021 17:00:00", "Rehabilitation");
-        physician2.setTimeTable("14-03-2021 09:00:00", "Rehabilitation");
-        physician2.setTimeTable("14-03-2021 11:00:00", "Rehabilitation");
-        physician2.setTimeTable("14-03-2021 13:00:00", "Osteopathy");
-        physician2.setTimeTable("14-03-2021 15:00:00", "Osteopathy");
-        physician2.setTimeTable("14-03-2021 17:00:00", "Osteopathy");
-        physician2.setTimeTable("15-03-2021 09:00:00", "Rehabilitation");
-        physician2.setTimeTable("15-03-2021 11:00:00", "Rehabilitation");
-        physician2.setTimeTable("15-03-2021 13:00:00", "Osteopathy");
-        physician2.setTimeTable("15-03-2021 15:00:00", "Osteopathy");
-        physician2.setTimeTable("15-03-2021 17:00:00", "Osteopathy");
-        physician2.setTimeTable("20-03-2021 09:00:00", "Rehabilitation");
-        physician2.setTimeTable("20-03-2021 11:00:00", "Rehabilitation");
-        physician2.setTimeTable("20-03-2021 13:00:00", "Osteopathy");
-        physician2.setTimeTable("20-03-2021 15:00:00", "Osteopathy");
-        physician2.setTimeTable("20-03-2021 17:00:00", "Osteopathy");
-        physician2.setTimeTable("21-03-2021 09:00:00", "Rehabilitation");
-        physician2.setTimeTable("21-03-2021 11:00:00", "Rehabilitation");
-        physician2.setTimeTable("21-03-2021 13:00:00", "Osteopathy");
-        physician2.setTimeTable("21-03-2021 15:00:00", "Osteopathy");
-        physician2.setTimeTable("21-03-2021 17:00:00", "Osteopathy");
-        physician2.setTimeTable("22-03-2021 09:00:00", "Rehabilitation");
-        physician2.setTimeTable("22-03-2021 11:00:00", "Rehabilitation");
-        physician2.setTimeTable("22-03-2021 13:00:00", "Osteopathy");
-        physician2.setTimeTable("22-03-2021 15:00:00", "Osteopathy");
-        physician2.setTimeTable("22-03-2021 17:00:00", "Osteopathy");
-        physician2.setTimeTable("27-03-2021 09:00:00", "Osteopathy");
-        physician2.setTimeTable("27-03-2021 11:00:00", "Osteopathy");
-        physician2.setTimeTable("27-03-2021 13:00:00", "Osteopathy");
-        physician2.setTimeTable("27-03-2021 15:00:00", "Rehabilitation");
-        physician2.setTimeTable("27-03-2021 17:00:00", "Rehabilitation");
-        physician2.setTimeTable("28-03-2021 09:00:00", "Osteopathy");
-        physician2.setTimeTable("28-03-2021 11:00:00", "Osteopathy");
-        physician2.setTimeTable("28-03-2021 13:00:00", "Osteopathy");
-        physician2.setTimeTable("28-03-2021 15:00:00", "Osteopathy");
-        physician2.setTimeTable("28-03-2021 17:00:00", "Osteopathy");
-        physician2.setTimeTable("29-03-2021 09:00:00", "Rehabilitation");
-        physician2.setTimeTable("29-03-2021 11:00:00", "Rehabilitation");
-        physician2.setTimeTable("29-03-2021 13:00:00", "Rehabilitation");
-        physician2.setTimeTable("29-03-2021 15:00:00", "Rehabilitation");
-        physician2.setTimeTable("29-03-2021 17:00:00", "Rehabilitation");
+        physician2.setTimeTable("06-04-2021 09:00:00", "Rehabilitation");
+        physician2.setTimeTable("06-04-2021 11:00:00", "Rehabilitation");
+        physician2.setTimeTable("06-04-2021 13:00:00", "Rehabilitation");
+        physician2.setTimeTable("06-04-2021 15:00:00", "Osteopathy");
+        physician2.setTimeTable("06-04-2021 17:00:00", "Osteopathy");
+        physician2.setTimeTable("07-04-2021 09:00:00", "Rehabilitation");
+        physician2.setTimeTable("07-04-2021 11:00:00", "Rehabilitation");
+        physician2.setTimeTable("07-04-2021 13:00:00", "Rehabilitation");
+        physician2.setTimeTable("07-04-2021 15:00:00", "Osteopathy");
+        physician2.setTimeTable("07-04-2021 17:00:00", "Osteopathy");
+        physician2.setTimeTable("08-04-2021 09:00:00", "Rehabilitation");
+        physician2.setTimeTable("08-04-2021 11:00:00", "Rehabilitation");
+        physician2.setTimeTable("08-04-2021 13:00:00", "Osteopathy");
+        physician2.setTimeTable("08-04-2021 15:00:00", "Osteopathy");
+        physician2.setTimeTable("08-04-2021 17:00:00", "Osteopathy");
+        physician2.setTimeTable("13-04-2021 09:00:00", "Osteopathy");
+        physician2.setTimeTable("13-04-2021 11:00:00", "Osteopathy");
+        physician2.setTimeTable("13-04-2021 13:00:00", "Rehabilitation");
+        physician2.setTimeTable("13-04-2021 15:00:00", "Rehabilitation");
+        physician2.setTimeTable("13-04-2021 17:00:00", "Rehabilitation");
+        physician2.setTimeTable("14-04-2021 09:00:00", "Rehabilitation");
+        physician2.setTimeTable("14-04-2021 11:00:00", "Rehabilitation");
+        physician2.setTimeTable("14-04-2021 13:00:00", "Osteopathy");
+        physician2.setTimeTable("14-04-2021 15:00:00", "Osteopathy");
+        physician2.setTimeTable("14-04-2021 17:00:00", "Osteopathy");
+        physician2.setTimeTable("15-04-2021 09:00:00", "Rehabilitation");
+        physician2.setTimeTable("15-04-2021 11:00:00", "Rehabilitation");
+        physician2.setTimeTable("15-04-2021 13:00:00", "Osteopathy");
+        physician2.setTimeTable("15-04-2021 15:00:00", "Osteopathy");
+        physician2.setTimeTable("15-04-2021 17:00:00", "Osteopathy");
+        physician2.setTimeTable("20-04-2021 09:00:00", "Rehabilitation");
+        physician2.setTimeTable("20-04-2021 11:00:00", "Rehabilitation");
+        physician2.setTimeTable("20-04-2021 13:00:00", "Osteopathy");
+        physician2.setTimeTable("20-04-2021 15:00:00", "Osteopathy");
+        physician2.setTimeTable("20-04-2021 17:00:00", "Osteopathy");
+        physician2.setTimeTable("21-04-2021 09:00:00", "Rehabilitation");
+        physician2.setTimeTable("21-04-2021 11:00:00", "Rehabilitation");
+        physician2.setTimeTable("21-04-2021 13:00:00", "Osteopathy");
+        physician2.setTimeTable("21-04-2021 15:00:00", "Osteopathy");
+        physician2.setTimeTable("21-04-2021 17:00:00", "Osteopathy");
+        physician2.setTimeTable("22-04-2021 09:00:00", "Rehabilitation");
+        physician2.setTimeTable("22-04-2021 11:00:00", "Rehabilitation");
+        physician2.setTimeTable("22-04-2021 13:00:00", "Osteopathy");
+        physician2.setTimeTable("22-04-2021 15:00:00", "Osteopathy");
+        physician2.setTimeTable("22-04-2021 17:00:00", "Osteopathy");
+        physician2.setTimeTable("27-04-2021 09:00:00", "Osteopathy");
+        physician2.setTimeTable("27-04-2021 11:00:00", "Osteopathy");
+        physician2.setTimeTable("27-04-2021 13:00:00", "Osteopathy");
+        physician2.setTimeTable("27-04-2021 15:00:00", "Rehabilitation");
+        physician2.setTimeTable("27-04-2021 17:00:00", "Rehabilitation");
+        physician2.setTimeTable("28-04-2021 09:00:00", "Osteopathy");
+        physician2.setTimeTable("28-04-2021 11:00:00", "Osteopathy");
+        physician2.setTimeTable("28-04-2021 13:00:00", "Osteopathy");
+        physician2.setTimeTable("28-04-2021 15:00:00", "Osteopathy");
+        physician2.setTimeTable("28-04-2021 17:00:00", "Osteopathy");
+        physician2.setTimeTable("29-04-2021 09:00:00", "Rehabilitation");
+        physician2.setTimeTable("29-04-2021 11:00:00", "Rehabilitation");
+        physician2.setTimeTable("29-04-2021 13:00:00", "Rehabilitation");
+        physician2.setTimeTable("29-04-2021 15:00:00", "Rehabilitation");
+        physician2.setTimeTable("29-04-2021 17:00:00", "Rehabilitation");
         physician2.setPhysicianId();
         Physician.setPhysicians(physician2);
 
         Physician physician3 = new Physician();
-        physician3.setFullName("Dr Isaac");
-        physician3.setAddress("17 Calver Avenue");
-        physician3.setPhoneNumber(1233);
-        physician3.setConsultationHours("09-03-2021 19:00:00");
+        physician3.setFullName("Dr. Isaac");
+        physician3.setAddress("London, UK");
+        physician3.setPhoneNumber(44556688);
+        physician3.setConsultationHours("09-04-2021 19:00:00");
         physician3.addExpertise("Physiotherapy");
-        physician3.setTimeTable("08-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("08-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("08-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("08-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("08-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("09-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("09-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("09-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("09-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("09-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("10-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("10-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("10-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("10-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("10-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("15-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("15-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("15-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("15-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("15-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("16-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("16-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("16-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("16-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("16-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("17-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("17-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("17-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("17-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("17-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("22-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("22-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("22-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("22-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("22-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("23-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("23-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("23-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("23-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("23-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("24-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("24-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("24-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("24-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("24-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("29-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("29-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("29-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("29-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("29-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("30-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("30-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("30-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("30-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("30-03-2021 17:00:00", "Physiotherapy");
-        physician3.setTimeTable("31-03-2021 09:00:00", "Physiotherapy");
-        physician3.setTimeTable("31-03-2021 11:00:00", "Physiotherapy");
-        physician3.setTimeTable("31-03-2021 13:00:00", "Physiotherapy");
-        physician3.setTimeTable("31-03-2021 15:00:00", "Physiotherapy");
-        physician3.setTimeTable("31-03-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("08-04-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("08-04-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("08-04-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("08-04-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("08-04-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("09-04-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("09-04-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("09-04-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("09-04-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("09-04-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-04-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-04-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-04-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-04-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("10-04-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("15-04-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("15-04-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("15-04-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("15-04-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("15-04-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("16-04-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("16-04-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("16-04-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("16-04-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("16-04-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-04-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-04-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-04-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-04-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("17-04-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("22-04-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("22-04-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("22-04-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("22-04-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("22-04-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("23-04-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("23-04-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("23-04-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("23-04-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("23-04-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-04-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-04-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-04-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-04-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("24-04-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("29-04-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("29-04-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("29-04-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("29-04-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("29-04-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("30-04-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("30-04-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("30-04-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("30-04-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("30-04-2021 17:00:00", "Physiotherapy");
+        physician3.setTimeTable("01-05-2021 09:00:00", "Physiotherapy");
+        physician3.setTimeTable("02-05-2021 11:00:00", "Physiotherapy");
+        physician3.setTimeTable("03-05-2021 13:00:00", "Physiotherapy");
+        physician3.setTimeTable("04-05-2021 15:00:00", "Physiotherapy");
+        physician3.setTimeTable("04-05-2021 17:00:00", "Physiotherapy");
         physician3.setPhysicianId();
         Physician.setPhysicians(physician3);
+        
+        Physician physician4 = new Physician();
+        physician4.setFullName("Dr. Sadiq");
+        physician4.setAddress("Halifax, UK");
+        physician4.setPhoneNumber(45356457);
+        physician4.setConsultationHours("09-04-2021 19:00:00");
+        physician4.addExpertise("Physiotherapy");
+        physician4.addExpertise("Rehabilitation");
+        physician4.addExpertise("Osteopathy");
+        physician4.setTimeTable("08-04-2021 09:00:00", "Physiotherapy");
+        physician4.setTimeTable("08-04-2021 11:00:00", "Physiotherapy");
+        physician4.setTimeTable("08-04-2021 13:00:00", "Rehabilitation");
+        physician4.setTimeTable("08-04-2021 15:00:00", "Rehabilitation");
+        physician4.setTimeTable("08-04-2021 17:00:00", "Physiotherapy");
+        physician4.setTimeTable("09-04-2021 09:00:00", "Physiotherapy");
+        physician4.setTimeTable("09-04-2021 11:00:00", "Physiotherapy");
+        physician4.setTimeTable("09-04-2021 13:00:00", "Physiotherapy");
+        physician4.setTimeTable("09-04-2021 15:00:00", "Physiotherapy");
+        physician4.setTimeTable("09-04-2021 17:00:00", "Physiotherapy");
+        physician4.setTimeTable("10-04-2021 09:00:00", "Osteopathy");
+        physician4.setTimeTable("10-04-2021 11:00:00", "Osteopathy");
+        physician4.setTimeTable("10-04-2021 13:00:00", "Osteopathy");
+        physician4.setTimeTable("10-04-2021 15:00:00", "Osteopathy");
+        physician4.setTimeTable("10-04-2021 17:00:00", "Osteopathy");
+        physician4.setTimeTable("15-04-2021 09:00:00", "Physiotherapy");
+        physician4.setTimeTable("15-04-2021 11:00:00", "Physiotherapy");
+        physician4.setTimeTable("15-04-2021 13:00:00", "Physiotherapy");
+        physician4.setTimeTable("15-04-2021 15:00:00", "Physiotherapy");
+        physician4.setTimeTable("15-04-2021 17:00:00", "Physiotherapy");
+        physician4.setTimeTable("16-04-2021 09:00:00", "Rehabilitation");
+        physician4.setTimeTable("16-04-2021 11:00:00", "Rehabilitation");
+        physician4.setTimeTable("16-04-2021 13:00:00", "Rehabilitation");
+        physician4.setTimeTable("16-04-2021 15:00:00", "Rehabilitation");
+        physician4.setTimeTable("16-04-2021 17:00:00", "Rehabilitation");
+        physician4.setTimeTable("17-04-2021 09:00:00", "Osteopathy");
+        physician4.setTimeTable("17-04-2021 11:00:00", "Osteopathy");
+        physician4.setTimeTable("17-04-2021 13:00:00", "Osteopathy");
+        physician4.setTimeTable("17-04-2021 15:00:00", "Osteopathy");
+        physician4.setTimeTable("17-04-2021 17:00:00", "Osteopathy");
+        physician4.setTimeTable("22-04-2021 09:00:00", "Physiotherapy");
+        physician4.setTimeTable("22-04-2021 11:00:00", "Physiotherapy");
+        physician4.setTimeTable("22-04-2021 13:00:00", "Physiotherapy");
+        physician4.setTimeTable("22-04-2021 15:00:00", "Physiotherapy");
+        physician4.setTimeTable("22-04-2021 17:00:00", "Physiotherapy");
+        physician4.setTimeTable("23-04-2021 09:00:00", "Osteopathy");
+        physician4.setTimeTable("23-04-2021 11:00:00", "Osteopathy");
+        physician4.setTimeTable("23-04-2021 13:00:00", "Osteopathy");
+        physician4.setTimeTable("23-04-2021 15:00:00", "Osteopathy");
+        physician4.setTimeTable("23-04-2021 17:00:00", "Osteopathy");
+        physician4.setTimeTable("24-04-2021 09:00:00", "Rehabilitation");
+        physician4.setTimeTable("24-04-2021 11:00:00", "Rehabilitation");
+        physician4.setTimeTable("24-04-2021 13:00:00", "Rehabilitation");
+        physician4.setTimeTable("24-04-2021 15:00:00", "Rehabilitation");
+        physician4.setTimeTable("24-04-2021 17:00:00", "Rehabilitation");
+        physician4.setTimeTable("29-04-2021 09:00:00", "Osteopathy");
+        physician4.setTimeTable("29-04-2021 11:00:00", "Osteopathy");
+        physician4.setTimeTable("29-04-2021 13:00:00", "Osteopathy");
+        physician4.setTimeTable("29-04-2021 15:00:00", "Osteopathy");
+        physician4.setTimeTable("29-04-2021 17:00:00", "Osteopathy");
+        physician4.setTimeTable("30-04-2021 09:00:00", "Rehabilitation");
+        physician4.setTimeTable("30-04-2021 11:00:00", "Rehabilitation");
+        physician4.setTimeTable("30-04-2021 13:00:00", "Rehabilitation");
+        physician4.setTimeTable("30-04-2021 15:00:00", "Rehabilitation");
+        physician4.setTimeTable("30-04-2021 17:00:00", "Rehabilitation");
+        physician4.setTimeTable("01-05-2021 09:00:00", "Physiotherapy");
+        physician4.setTimeTable("02-05-2021 11:00:00", "Physiotherapy");
+        physician4.setTimeTable("03-05-2021 13:00:00", "Physiotherapy");
+        physician4.setTimeTable("04-05-2021 15:00:00", "Physiotherapy");
+        physician4.setTimeTable("04-05-2021 17:00:00", "Physiotherapy");
+        physician4.setPhysicianId();
+        Physician.setPhysicians(physician4);
 
         return physicians;
     }
@@ -400,34 +491,85 @@ public class Mainmenu extends javax.swing.JFrame {
     private static ArrayList<Patient> addPatients() {
         ArrayList<Patient> patients = new ArrayList<Patient>();
         Patient patient1 = new Patient();
-        patient1.setFullName("Nadir");
-        patient1.setAddress("53 ST stephens Rd");
-        patient1.setPhoneNumber(67890);
+        patient1.setFullName("David");
+        patient1.setAddress("19 Calver Avenue");
+        patient1.setPhoneNumber(11223344);
         patient1.setPatientId();
         Patient.setPatients(patient1);
 
         Patient patient2 = new Patient();
-        patient2.setFullName("David");
-        patient2.setAddress("52 ST stephens Rd");
-        patient2.setPhoneNumber(67890);
+        patient2.setFullName("Babar");
+        patient2.setAddress("49 Gleanings Avenue");
+        patient2.setPhoneNumber(22334455);
         patient2.setPatientId();
         Patient.setPatients(patient2);
 
         Patient patient3 = new Patient();
-        patient3.setFullName("Gary");
-        patient3.setAddress("51 ST stephens Rd");
-        patient3.setPhoneNumber(56789);
+        patient3.setFullName("Ahmed");
+        patient3.setAddress("14 Raglan Terrace");
+        patient3.setPhoneNumber(22334466);
         patient3.setPatientId();
         Patient.setPatients(patient3);
 
         Patient patient4 = new Patient();
-        patient4.setFullName("Richard");
-        patient4.setAddress("43 ST stephens Rd");
-        patient4.setPhoneNumber(19890);
+        patient4.setFullName("Jonas");
+        patient4.setAddress("53 St Stephen Rd");
+        patient4.setPhoneNumber(66778899);
         patient4.setPatientId();
         Patient.setPatients(patient4);
+        
+        Patient patient5 = new Patient();
+        patient5.setFullName("Elise");
+        patient5.setAddress("15 Gleanings Avenue");
+        patient5.setPhoneNumber(22334455);
+        patient5.setPatientId();
+        Patient.setPatients(patient5);
+        
+        Patient patient6 = new Patient();
+        patient6.setFullName("Ayesha");
+        patient6.setAddress("25 Raglan Terrace");
+        patient6.setPhoneNumber(22233344);
+        patient6.setPatientId();
+        Patient.setPatients(patient6);
+        
+        Patient patient7 = new Patient();
+        patient7.setFullName("Sonya");
+        patient7.setAddress("30 Calver Avenue");
+        patient7.setPhoneNumber(12343212);
+        patient7.setPatientId();
+        Patient.setPatients(patient7);
+        
+        Patient patient8 = new Patient();
+        patient8.setFullName("Christy");
+        patient8.setAddress("33 Sun bridge Rd");
+        patient8.setPhoneNumber(33577226);
+        patient8.setPatientId();
+        Patient.setPatients(patient8);
+        
+        Patient patient9 = new Patient();
+        patient9.setFullName("Lisa");
+        patient9.setAddress("12 St Stephens Rd");
+        patient9.setPhoneNumber(22556677);
+        patient9.setPatientId();
+        Patient.setPatients(patient9);
+        
+        Patient patient10 = new Patient();
+        patient10.setFullName("Shaun");
+        patient10.setAddress("25 Gleanings Avenue");
+        patient10.setPhoneNumber(17895642);
+        patient10.setPatientId();
+        Patient.setPatients(patient10);
 
         return patients;
+    }
+    private static void addAppointments(){
+    Treatment newTreatment = new Treatment("Rehabilitation","Tue 06-04-2021 09:00:00","Dr. ALI", "David","GYM");
+        Treatment newTreatment1 = new Treatment("Osteopathy","Mon 05-04-2021 15:00:00","Dr. Mubeen", "Babar","GYM");
+Treatment newTreatment2 = new Treatment("Physiotherapy","Thu 08-04-2021 11:00:00","Dr. Isaac", "Ahmed","GYM");
+        Treatment newTreatment3 = new Treatment("Osteopathy","Mon 12-04-2021 17:00:00","Dr. Mubeen", "Jonas","GYM");
+        Treatment newTreatment4 = new Treatment("Osteopathy","08-04-2021 15:00:00","Dr. ALI", "Elise","GYM");
+        Treatment newTreatment5 = new Treatment("Rehabilitation","Mon 05-04-2021 09:00:00","Dr. Mubeen", "Ayesha","GYM");
+        Treatment newTreatment6 = new Treatment("Physiotherapy","Sat 17-04-2021 13:00:00","Dr. Isaac", "Lisa","GYM");
     }
     
     
@@ -438,5 +580,6 @@ public class Mainmenu extends javax.swing.JFrame {
     private javax.swing.JButton btnPhysicianMenu;
     private javax.swing.JButton btnVisitorMenu;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
